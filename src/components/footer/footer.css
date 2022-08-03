@@ -1,0 +1,89 @@
+/* Подвал */
+footer{
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    width: 100%;
+    background-color: #EAEAEA;
+}
+
+.mid-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 33%
+}
+
+.column a{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.contacts{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 5%;
+    right: 0;
+    align-self: flex-end;
+    margin-bottom: 2%;
+}
+
+.icon-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 33%;
+    margin-right: 5%;
+}
+
+.icon{
+    cursor: pointer;
+    width: 80%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon a{
+    width: 80%;
+    height: 100%;
+    text-decoration: none;
+}
+
+#icon1{
+    background-image: url('../../images/logos/insta.png');
+}
+
+#icon2{
+    background-image: url('../../images/logos/twitter.png');
+}
+
+#icon3{
+    background-image: url('../../images/logos/facebook.png');
+}
