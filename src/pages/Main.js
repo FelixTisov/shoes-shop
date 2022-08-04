@@ -47,14 +47,23 @@ function Main() {
                     </div>
 
                     <div className='slider-cont'>
-                        <div className='slider-box' id='box1'>
-
+                        <div className='slider-box'>
+                            <div className='image-box' id='box1'/>
+                            <div className='title-cont'>
+                                <span>Air Zoom</span>
+                            </div>
                         </div>
-                        <div className='slider-box' id='box1'>
-
+                        <div className='slider-box'>
+                            <div className='image-box' id='box2'/>
+                            <div className='title-cont'>
+                                <span>Jordan</span>
+                            </div>
                         </div>
-                        <div className='slider-box' id='box1'>
-
+                        <div className='slider-box'>
+                            <div className='image-box' id='box3'/>
+                            <div className='title-cont'>
+                                <span>Air Max</span>
+                            </div>
                         </div>
                     </div>
 
@@ -68,10 +77,36 @@ function Main() {
 
                 <div className='circles-cont'>
                     <div className='circles'>
-                        <div className='round'></div>
+                        <div className='round active'></div>
                         <div className='round'></div>
                         <div className='round'></div>
                     </div>
+
+                </div>
+            </div>
+
+            {/* Промо раздел */}
+            <div className='promo-cont'>
+                <div className='top-cont'>
+                    <div className='third-box'>
+                        <div className='brand-name-cont'>
+                            <span>NIKE</span>
+                        </div>
+                        <div className='brand-title-cont'>
+                            <p>NEW<br/>COLLECTION</p>
+                        </div>
+
+                    </div>
+
+                    <div className='third-box'>
+                        <div className='main-image'></div>
+                    </div>
+
+                    <div className='third-box'>
+
+                    </div>
+                </div>
+                <div className='bottom-cont'>
 
                 </div>
             </div>
