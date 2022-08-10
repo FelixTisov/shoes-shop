@@ -226,7 +226,7 @@ video {
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(90deg, #FFC165 55%, #FFF 45%);
+  background: linear-gradient(90deg, #FFC165 58%, #FFF 42%);
 }
 
 .top-cont {
@@ -248,7 +248,7 @@ video {
   justify-content: center;
   height: 20%;
   width: 100%;
-  background-color: rgb(108, 108, 255);
+  /* background-color: rgb(108, 108, 255); */
 }
 
 .third-box {
@@ -262,16 +262,75 @@ video {
   /* background-color: rgb(108, 255, 113); */
 }
 
+.third-box span {
+  font-family: 'Anton';
+  font-size: 64px;
+  color: #000;
+  margin-bottom: 20%;
+  margin-right: -20%;
+}
+
+.brand-name-cont {
+  /* display: flex; */
+  width: 50%;
+  /* background-color: blue; */
+}
+
 .brand-name-cont span {
   font-family: 'Nerko One';
   font-size: 110px;
   color: #FFF;
 }
 
+.brand-name-cont hr {
+  height: 2px;
+  background-color: #FFF;
+  border: none;
+  width: 100%;
+}
+
 .brand-title-cont p {
   font-family: 'Anton';
   font-size: 70px;
   color: #FFF;
+}
+
+.details-button {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50px;
+  background-color: yellow;
+}
+
+.details-button-span-cont {
+  position: relative;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 70%;
+  background-color: red;
+}
+
+.details-button-arrow-cont {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 30%;
+  background-color: blue;
+}
+
+.details-button span {
+  font-family: 'Roboto';
+  font-size: 28px;
+  color: #000;
 }
 
 .main-image {
@@ -283,6 +342,85 @@ video {
     background-size: contain;
     background-position: bottom;
     background-image: url('../images/shoes/mainimg.png');
+}
+
+/* Промо товары */
+.rounded-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 100px;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.rouned-item{
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 224px;
+  height: 81px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: transparent;
+  border-radius: 31px;
+  box-shadow: 9px 9px 24px 1px rgba(0, 0, 0, .25  );
+}
+.rouned-item-active{
+  width: 265px;
+  height: 95.4px;
+}
+.photo-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+.photo{
+  margin-left: 6%;
+  position: absolute;
+  width: 124px;
+  height: 68px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#ph1{
+  background-image: url('../images/shoes/nike1.png');
+}
+#ph2{
+  background-image: url('../images/shoes/nike2.png');
+}
+#ph3{
+  background-image: url('../images/shoes/nike3.png');
+}
+#ph4{
+  background-image: url('../images/shoes/nike4.png');
+}
+#ph5{
+  background-image: url('../images/shoes/nike5.png');
+}
+
+.price{
+  margin-left: 30%;
+  width: 40%;
+}
+
+.price p {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #000;
+}
+
+/* 3Д карусель */
+.object-cont {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(270deg, #65A8A8 58%, #FFF 42%);
 }
 
 /* Основной раздел */
