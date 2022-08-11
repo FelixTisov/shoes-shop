@@ -4,40 +4,6 @@
 /* Основные блоки */
 html,body{
     margin: 0;
-    overflow-x: hidden;
 }
 
-.wrapper{
-    position: absolute;
-    display: flex;
-    width: 100vw;
-    background-color: #FFF;
-    display: grid;
-    height: 100vh
-}
 
-/* Cтили текста */
-h1{
-    font-size: 42px;
-    font-family: 'Roboto';
-    font-weight: 500;
-    line-height: 1.5; 
-}
-
-h2{
-    font-size: 36px;
-    font-family: 'Roboto';
-    font-weight: 600;
-}
-
-h3{
-    font-size: 26px;
-    font-family: 'Roboto';
-    font-weight: 500;
-}
-
-h4{
-    font-size: 20px;
-    font-family: 'Roboto';
-    font-weight: 400;
-}

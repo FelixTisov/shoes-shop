@@ -4,6 +4,9 @@ import '../styles/animated.css'
 import '../styles/common.css'
 import '../styles/main.css'
 
+const saleString = 'SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25%'
+//const saleString = 'SALES -25% FOR ALL COLLECTIONS     SALES -25% FOR ALL COLLECTIONS     SALES -25% FOR ALL COLLECTIONS     SALES -25% FOR ALL COLLECTIONS     SALES -25% FOR ALL'
+
 function Main() {
     return(
         <div className='wrapper'>
@@ -69,7 +72,7 @@ function Main() {
 
                     <div className='arrow-cont'>
                         <div className='arrow'>
-                            <div id='arrow-right'/>
+                            <div className='arrow-right'/>
                         </div>
                     </div>
 
@@ -90,9 +93,12 @@ function Main() {
                 <div className='top-cont'>
                     <div className='third-box'>
                         <div className='brand-name-cont'>
+                            <span class="dot"></span>
                             <span>NIKE</span>
-                            <hr/>
+                            <span class="dot"></span>
+                            
                         </div>
+                        <hr/>
                         <div className='brand-title-cont'>
                             <p>NEW<br/>COLLECTION</p>
                         </div>
@@ -104,18 +110,21 @@ function Main() {
                     </div>
 
                     <div className='third-box'>
-                        
-                        <span>AIR MAX</span>
-                        <div className='details-button'>
-                            <div className='details-button-span-cont'>
-                                <span>Details</span>
-                            </div>
-                            <div className='details-button-arrow-cont'>
-                                <div className='arrow'>
-                                    <div id='arrow-right'/>
+                        <div className='third-box-cont'>
+                            <span>AIR MAX</span>
+                        </div>
+                        <div className='third-box-cont' >
+                            <div className='details-button'>
+                                <div className='details-button-span-cont'>
+                                    <p>Details</p>
+                                </div>
+                                <div className='details-button-arrow-cont'>
+                                    <div className='arrow'>
+                                        <div className='arrow-right' id='details-arrow-right'/>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>       
                     </div>
                     
                 </div>
@@ -161,9 +170,27 @@ function Main() {
 
             {/* 3Д карусель */}
             <div className='object-cont'>
-
+                
+            </div>
+            
+            {/* Ленты с надписями */}
+            <div className='sale-string-cont'>
+                <div className='sale-string' id='blue-string'>
+                    <div id="scroll-text"><p>{saleString}</p></div>
+                </div>
+                <div className='sale-string' id='green-string'>
+                    <div id="scroll-text"><p>{saleString}</p></div>
+                </div>
+                <div className='sale-string' id='corral-string'>
+                    <div id="scroll-text"><p>{saleString}</p></div>
+                </div>
             </div>
 
+            <div className='basketball-cont'>
+                <h2>Nike Basketball</h2>
+                <div className='basketball-image'></div>
+            </div>
+            
             {/* Основная часть */}
             <div class="main">
                 
