@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /* Шапка */
 header{
+    top: 0;   
     position: fixed;
     z-index: 5;
     width: 100%;

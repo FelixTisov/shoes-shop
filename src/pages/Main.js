@@ -186,9 +186,31 @@ function Main() {
                 </div>
             </div>
 
+            {/* Баскетбольная серия */}
             <div className='basketball-cont'>
                 <h2>Nike Basketball</h2>
                 <div className='basketball-image'></div>
+            </div>
+
+            {/* Форма обратной связи */}
+            <div className='form-container'>
+                <div className='form'>
+                    <div className='form-title-cont'>
+                        <span>Subscribe to our</span>
+                        <span>news and sales</span>
+                    </div>
+                    <div className='form-input-cont'>
+                        <div className='input-cont'>
+                            <input placeholder='Enter your email here' type="email"/>
+                        </div>
+                        <div className='form-button'>
+                            <span>Subscribe!</span>
+                        </div>
+                    </div>
+                </div>
+                <div className='form-image-cont'>
+
+                </div>
             </div>
             
             {/* Основная часть */}

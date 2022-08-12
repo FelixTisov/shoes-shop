@@ -580,6 +580,127 @@ video {
   background-image: url('../images/shoes/basketball.jpg');
 }
 
+.form-container {
+  margin-top: 7%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80.5%;
+  max-width: 1224px;
+  height: 295px;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 59.9%;
+  height: 100%;
+  background-color: #EAC794;
+}
+
+.form-title-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 75%;
+  height: 60%;
+}
+
+.form-title-cont span {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 54px;
+  letter-spacing: 0.105em;
+  color: #FFFFFF;
+}
+
+.form-input-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 18%;
+  background-color: #FFF;
+}
+
+.input-cont {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+}
+
+.input-cont input {
+  width: 96%;
+  height: 75%;
+  border: none;
+}
+
+.input-cont input::placeholder {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: left;
+  color: #888888;
+}
+
+.input-cont input:focus {
+  outline: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: left;
+  color: #000;
+}
+
+.form-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+  background-color: #92703D;
+  cursor: pointer;
+}
+
+.form-button span {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  color: #FFFFFF;
+}
+
+.form-image-cont {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 45%;
+  background-image: url('../images/shoes/run.jpeg');
+}
+
 /* Основной раздел */
 .main {
     display: flex ;
