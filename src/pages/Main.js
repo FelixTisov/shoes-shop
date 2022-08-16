@@ -189,7 +189,9 @@ function Main() {
             {/* Баскетбольная серия */}
             <div className='basketball-cont'>
                 <h2>Nike Basketball</h2>
-                <div className='basketball-image'></div>
+                <div className='basketball-image'>
+                    <button>Explore now</button>
+                </div>
             </div>
 
             {/* Форма обратной связи */}
@@ -211,11 +213,6 @@ function Main() {
                 <div className='form-image-cont'>
 
                 </div>
-            </div>
-            
-            {/* Основная часть */}
-            <div class="main">
-                
             </div>
 
             <Footer/>

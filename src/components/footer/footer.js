@@ -3,23 +3,22 @@ import './footer.css'
 function Footer() {
     return(
         <footer>
-            <div class="mid-text">
-                <div class="column">
-                    <a>Оплата</a>
-                    <a>Доставка</a>
-                    <a>Контакты</a>
-                </div>
-                <div class="column">
-                    <a>Лицензия</a>
-                    <a>Партнёрство</a>
-                    <a>Поставщики</a>
-                </div>
-                <div class="column">
-                    <a href="../pages/help.html">Поддержка</a>
-                    <a>Бонусы</a>
-                    <a>Клиентам</a>
-                </div>
+            <hr/>
+            <div className='text-line first-line'>
+                <a href='#'>Order Status</a>
+                <a href='#'>Blog</a>
+                <a href='#'>Gift Cards</a>
+                <a href='#'>Coupons</a>
+                <a href='#'>About Us</a>
             </div>
+            <div className='text-line second-line'>
+                <a href='#'>License</a>
+                <a href='#'>News</a>
+                <a href='#'>Shipping</a>
+                <a href='#'>Investors</a>
+                <a href='#'>Returns</a>
+            </div>  
+
             <div class="contacts">
                 <div class="icon-cont">
                     <div class="icon" id="icon1">
@@ -33,6 +32,13 @@ function Footer() {
                     <div class="icon" id="icon3"></div>   
                 </div>
             </div>
+
+            <hr id='hr-bottom'/>
+
+            <div className='mark-cont'>
+                <span>© 2022 All Rights Reserved.</span>
+            </div>
+            
         </footer>
     )
 }

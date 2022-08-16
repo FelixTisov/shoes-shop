@@ -2,45 +2,74 @@
 footer{
     z-index: 5;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 30vh;
-    width: 100%;
-    background-color: #EAEAEA;
-}
-
-.mid-text{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 100%;
-}
-
-.column{
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 33%
+    height: 45vh;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 10%;
 }
 
-.column a{
-    text-decoration: none;
-    color: #000;
-    cursor: pointer;
+hr {
+    height: 1px;
+    background-color: #8e8e8e;
+    border: none;
+    width: 90%;
+}
+
+#hr-bottom{
+    margin-top: 3%;
+    
+}
+
+.text-line {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5%;
+}
+
+.first-line {
+    margin-top: 2.5%;
+}
+
+.first-line a {
     font-family: 'Roboto';
-    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.105em;
+    color: #000000;
+    text-decoration: none;
+    margin-left: 2.6%;
+    margin-right: 2.6%;
+}
+
+.second-line {
+    margin-top: 1%;
+}
+
+.second-line a {
+    font-family: 'Roboto';
+    font-style: normal;
     font-weight: 400;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.105em;
+    color: #000;
+    text-decoration: none;
+    margin-left: 1.6%;
+    margin-right: 1.6%;
 }
 
 .contacts{
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,8 +77,8 @@ footer{
     width: 15%;
     height: 5%;
     right: 0;
-    align-self: flex-end;
-    margin-bottom: 2%;
+    align-self: center;
+    margin-top: 2%;
 }
 
 .icon-cont{
@@ -63,6 +92,8 @@ footer{
 }
 
 .icon{
+    padding: 15%;
+    position: absolute;
     cursor: pointer;
     width: 80%;
     height: 100%;
@@ -86,4 +117,13 @@ footer{
 
 #icon3{
     background-image: url('../../images/logos/facebook.png');
+}
+
+.mark-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
 }
