@@ -5,7 +5,27 @@ import '../styles/common.css'
 import '../styles/main.css'
 
 const saleString = 'SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25%'
-//const saleString = 'SALES -25% FOR ALL COLLECTIONS     SALES -25% FOR ALL COLLECTIONS     SALES -25% FOR ALL COLLECTIONS     SALES -25% FOR ALL COLLECTIONS     SALES -25% FOR ALL'
+
+window.onscroll = function () {
+    let pos = window.pageYOffset;
+    let block1 = document.getElementById("yellow");
+    let block2 = document.getElementById("green");
+    // alert(pos)
+    if (pos >= 310) {
+        block1.classList.add("promo-cont-active");
+    }
+    else {
+        block1.classList.remove("promo-cont-active");
+    }
+
+    if (pos <= 1000 ) {
+        block2.classList.add("object-cont-active");
+        // block1.classList.remove("promo-cont-active");
+    }
+    else {
+        block2.classList.remove("object-cont-active");
+    }
+}
 
 function Main() {
     return(
@@ -89,7 +109,7 @@ function Main() {
             </div>
 
             {/* Промо раздел */}
-            <div className='promo-cont'>
+            <div className='promo-cont' id='yellow'>
                 <div className='top-cont'>
                     <div className='third-box'>
                         <div className='brand-name-cont'>
@@ -169,7 +189,7 @@ function Main() {
             </div>
 
             {/* 3Д карусель */}
-            <div className='object-cont'>
+            <div className='object-cont' id='green'>
                 
             </div>
             
