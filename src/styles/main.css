@@ -319,14 +319,31 @@ video {
 }
 
 .dot {
-  height: 15px;
-  width: 15px;
+  position: absolute;
+  height: 18px;
+  width: 18px;
   background-color: #FFF;
   border-radius: 50%;
   display: inline-block;
-  margin-left: 10px;
 }
 
+.dot-active {
+  height: 28px;
+  width: 28px;
+}
+
+#dot-top {
+  margin-top: -3px;
+  margin-left: 18%;
+}
+#dot-middle {
+  margin-top: 97%;
+  margin-left: 97%;
+}
+#dot-bottom {
+  margin-top: 194%;
+  margin-left: 18%;
+}
 
 .brand-title-cont p {
   font-family: 'Anton';

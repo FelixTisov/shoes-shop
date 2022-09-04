@@ -18,7 +18,7 @@ window.onscroll = function () {
         block1.classList.remove("promo-cont-active");
     }
 
-    if (pos <= 1000 ) {
+    if (pos <= 1100 ) {
         block2.classList.add("object-cont-active");
         // block1.classList.remove("promo-cont-active");
     }
@@ -189,7 +189,11 @@ function Main() {
                 <div className='object-cont-right'>
                     <div className='object-image'></div>
                     
-                    <div className='radius'></div>
+                    <div className='radius'>
+                        <div className='dot' id='dot-top'/>
+                        <div className='dot' id='dot-middle'/>
+                        <div className='dot' id='dot-bottom'/>
+                    </div>
 
                     <div className='object-cont-tools'>
                         <span className='object-cont-button'>Compare</span>
