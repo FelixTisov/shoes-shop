@@ -299,22 +299,23 @@ video {
   align-items: center;
   justify-content: center;
   width: 70%;
-  /* background-color: blue; */
+  margin-bottom: -5%;
 }
 
-.third-box hr {
-  height: 2px;
-  background-color: #FFF;
-  border: none;
-  width: 70%;
-}
-
-.brand-name-cont span {
+.shadow-text{
+  font-size: 120px;
+  letter-spacing: 0.28em;
+  margin-left: 20px;
+  text-align: center;
+  color: #fcedd8;
   font-family: 'Nerko One';
-  font-size: 110px;
-  color: #FFF;
-  margin-left: 10px;
-  letter-spacing: 0.18em;
+  font-weight: 700;
+  text-shadow: 5px 5px 0px #eb452b, 
+              10px 10px 0px #efa032, 
+              15px 15px 0px #46b59b, 
+              20px 20px 0px #017e7f, 
+              25px 25px 0px #052939, 
+              30px 30px 0px #c11a2b;
 }
 
 .dot {
@@ -323,7 +324,9 @@ video {
   background-color: #FFF;
   border-radius: 50%;
   display: inline-block;
+  margin-left: 10px;
 }
+
 
 .brand-title-cont p {
   font-family: 'Anton';
@@ -484,6 +487,68 @@ video {
 .object-cont-active{
 --_p: 80%;
 }
+
+.object-cont-right {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+  right: 0;
+  /* background-color: pink; */
+}
+
+.object-image {
+  display: flex;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 50%;
+  width: 50%;
+  background-image: url('../images/shoes/sale.png');
+}
+
+.object-cont-tools{
+  display: flex;
+  margin-bottom: -14%;
+  margin-right: 35%;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 30px;
+}
+
+.object-cont-button {
+  color: #fff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.radius {
+  position: absolute;
+  width: 16em;  /* ширина в два раза меньше высоты, иначе получится полуовал */
+  height: 32em;
+  border: 2px solid #fff;
+  /* border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%; */
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+  border-left-color: transparent;
+  background: transparent;
+  margin-right: -50%;
+}
+
 
 /* Ленты с надписями */
 .sale-string-cont {

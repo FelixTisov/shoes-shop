@@ -113,12 +113,8 @@ function Main() {
                 <div className='top-cont'>
                     <div className='third-box'>
                         <div className='brand-name-cont'>
-                            <span class="dot"></span>
-                            <span>NIKE</span>
-                            <span class="dot"></span>
-                            
+                            <span className='shadow-text'>NIKE</span>
                         </div>
-                        <hr/>
                         <div className='brand-title-cont'>
                             <p>NEW<br/>COLLECTION</p>
                         </div>
@@ -190,7 +186,17 @@ function Main() {
 
             {/* 3Д карусель */}
             <div className='object-cont' id='green'>
-                
+                <div className='object-cont-right'>
+                    <div className='object-image'></div>
+                    
+                    <div className='radius'></div>
+
+                    <div className='object-cont-tools'>
+                        <span className='object-cont-button'>Compare</span>
+                        <span className='object-cont-button'>Learn more</span>
+                        <span className='object-cont-button'>To cart</span>
+                    </div>
+                </div>
             </div>
             
             {/* Ленты с надписями */}
