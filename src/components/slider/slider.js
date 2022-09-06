@@ -1,24 +1,41 @@
 import { useState } from 'react'
 import './slider.css'
 
-const pageWidth = 100
-
+const offsetIndex = 1
 
 function Slider({children}) {
-
+    
     const [offset, setOffset] = useState(0)
 
+    // Нажатие влево
     const handleLeft = () => {
+
         setOffset((currentOffset) => {
-            return Math.min((currentOffset + pageWidth), 0)
+            return Math.min((currentOffset + offsetIndex), 0)
         })
+        setDotActive(-offset-1)
+
     }
     
+    // Нажатие вправо
     const handleRight = () => {
+
         setOffset((currentOffset) => {
-            const maxOffset = -(pageWidth * 2)
-            return Math.max((currentOffset - pageWidth), maxOffset)
+            const maxOffset = -(offsetIndex * 2)
+            return Math.max((currentOffset - offsetIndex), maxOffset)
         })
+        setDotActive(-offset+1)
+
+    }
+
+    function setDotActive(index) {
+        if(index <= 2 && index >=0) {
+            let currentDot = document.getElementById(index);
+            let prevDot = document.querySelector('.round-active')
+
+            prevDot.classList.remove("round-active")
+            currentDot.classList.add("round-active")
+        }
     }
 
     return (
@@ -36,7 +53,7 @@ function Slider({children}) {
                 <div className='window'>
                     <div className="all-items-cont"
                         style={{
-                            transform: `translateX(${offset}%)`
+                            transform: `translateX(${(offset*100)}%)`
                         }}
                     >{children}</div>
                 </div>
@@ -53,9 +70,9 @@ function Slider({children}) {
             {/* Указатели слайда */}
             <div className='circles-cont'>
                 <div className='circles'>
-                    <div className='round active'></div>
-                    <div className='round'></div>
-                    <div className='round'></div>
+                    <div className='round round-active' id='0'></div>
+                    <div className='round' id='1'></div>
+                    <div className='round' id='2'></div>
                 </div>
             </div>
 

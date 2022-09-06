@@ -85,19 +85,19 @@ function Main() {
 
                 <div className='slider-cont' id='slide2'>
                     <div className='slider-box'>
-                        <div className='image-box' id='box1'/>
+                        <div className='image-box' id='box4'/>
                         <div className='title-cont'>
-                            <span>Air Zoom</span>
+                            <span>Flywire</span>
                         </div>
                     </div>
                     <div className='slider-box'>
-                        <div className='image-box' id='box2'/>
+                        <div className='image-box' id='box5'/>
                         <div className='title-cont'>
-                            <span>Jordan</span>
+                            <span>Force II</span>
                         </div>
                     </div>
                     <div className='slider-box'>
-                        <div className='image-box' id='box3'/>
+                        <div className='image-box' id='box6'/>
                         <div className='title-cont'>
                             <span>Air Max</span>
                         </div>
@@ -106,19 +106,19 @@ function Main() {
 
                 <div className='slider-cont' id='slide3'>
                     <div className='slider-box'>
-                        <div className='image-box' id='box1'/>
+                        <div className='image-box' id='box7'/>
                         <div className='title-cont'>
                             <span>Air Zoom</span>
                         </div>
                     </div>
                     <div className='slider-box'>
-                        <div className='image-box' id='box2'/>
+                        <div className='image-box' id='box8'/>
                         <div className='title-cont'>
                             <span>Jordan</span>
                         </div>
                     </div>
                     <div className='slider-box'>
-                        <div className='image-box' id='box3'/>
+                        <div className='image-box' id='box9'/>
                         <div className='title-cont'>
                             <span>Air Max</span>
                         </div>
