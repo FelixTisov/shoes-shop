@@ -208,33 +208,6 @@ video {
               30px 30px 0px #c11a2b;
 }
 
-.dot {
-  position: absolute;
-  height: 18px;
-  width: 18px;
-  background-color: #FFF;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.dot-active {
-  height: 28px;
-  width: 28px;
-}
-
-#dot-top {
-  margin-top: -3px;
-  margin-left: 18%;
-}
-#dot-middle {
-  margin-top: 97%;
-  margin-left: 97%;
-}
-#dot-bottom {
-  margin-top: 194%;
-  margin-left: 18%;
-}
-
 .brand-title-cont p {
   font-family: 'Anton';
   font-size: 70px;
@@ -418,9 +391,27 @@ video {
   background-image: url('../images/shoes/sale.png');
 }
 
+.canvas-cont {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 55%;
+  width: 65%;
+  margin-top: 6%;
+  
+}
+
+.canvas {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  /* background-color: pink; */
+}
+
 .object-cont-tools{
   display: flex;
-  margin-bottom: -14%;
+  margin-top: 5%;
   margin-right: 35%;
   flex-direction: row;
   position: relative;
@@ -454,6 +445,35 @@ video {
   border-left-color: transparent;
   background: transparent;
   margin-right: -50%;
+}
+
+.dot {
+  cursor: pointer;
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-color: #FFF;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-active {
+  height: 28px;
+  width: 28px;
+  
+}
+
+#dot-top {
+  margin-top: -3px;
+  margin-left: 18%;
+}
+#dot-middle {
+  margin-top: 97%;
+  margin-left: 97%;
+}
+#dot-bottom {
+  margin-top: 194%;
+  margin-left: 18%;
 }
 
 

@@ -5,6 +5,22 @@ import '../styles/animated.css'
 import '../styles/common.css'
 import '../styles/main.css'
 
+import { Canvas} from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import * as THREE from 'three'
+
+import First from '../models/first'
+import Third from '../models/third'
+import { useState } from 'react'
+
+const models = [First, Third]
+
+/* Настройки камеры */
+let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000 );
+camera.position.x = 7  //вокруг центра по плоскости
+camera.position.y = 0 //по вертикали
+camera.position.z = 0
+
 const saleString = 'SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25%'
 
 window.onscroll = function () {
@@ -29,6 +45,21 @@ window.onscroll = function () {
 }
 
 function Main() {
+
+    const [model, setModel] = useState(models[0])
+
+    const handleDotClick = (index, id) => {
+
+        setModel(models[index])
+
+        // let currentDot = document.getElementById(id);
+        // let prevDot = document.querySelector('.dot-active')
+
+        // prevDot.classList.remove("dot-active")
+        // currentDot.classList.add("dot-active")
+
+    }
+
     return(
         <div className='wrapper'>
 
@@ -205,11 +236,37 @@ function Main() {
             {/* 3Д карусель */}
             <div className='object-cont' id='green'>
                 <div className='object-cont-right'>
-                    <div className='object-image'></div>
+                    {/* <div className='object-image'></div> */}
+
+                    <div className='canvas-cont'>
+                        <Canvas className='canvas' camera={camera}>
+                            {/* Настройки сцены */}
+                            <OrbitControls 
+                                minPolarAngle={Math.PI/2.5} 
+                                maxPolarAngle={Math.PI/2.5} 
+                                enabled={true} 
+                                position={[7, 7, 7]}
+                                ro
+                                maxDistance={6} 
+                                minDistance={6} 
+                                autoRotate={true}
+                                autoRotateSpeed={5} 
+                            />
+                            <ambientLight color={'#fff'} intensity={0.6}/>
+                           
+                            {/* <mesh>
+                                <boxGeometry attach="geometry" args={[3, 2, 1]} />
+                                <meshPhongMaterial attach="material" color="hotpink" />
+                            </mesh> */}
+                            
+                            {model}
+
+                        </Canvas>
+                    </div>
                     
                     <div className='radius'>
-                        <div className='dot' id='dot-top'/>
-                        <div className='dot' id='dot-middle'/>
+                        <div className='dot' id='dot-top' onClick={() => handleDotClick(0, 'dot-top')}/>
+                        <div className='dot' id='dot-middle' onClick={() => handleDotClick(1, 'dot-middle')}/>
                         <div className='dot' id='dot-bottom'/>
                     </div>
 
