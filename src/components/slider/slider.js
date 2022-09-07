@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import {FaChevronLeft, FaChevronRight} from 'react-icons/fa'
 import './slider.css'
 
 const offsetIndex = 1
@@ -44,9 +45,7 @@ function Slider({children}) {
 
                 {/* Стрелка влево */}
                 <div className='arrow-cont'>
-                    <div className='arrow' onClick={handleLeft} >
-                        <div id='arrow-left'/>
-                    </div>
+                    <FaChevronLeft className='arrow' onClick={handleLeft}/>
                 </div>
 
                 {/* Все слайды */}
@@ -60,9 +59,7 @@ function Slider({children}) {
 
                 {/* Стрелка вправо */}
                 <div className='arrow-cont'>
-                    <div className='arrow' onClick={handleRight}>
-                        <div className='arrow-right'/>
-                    </div>
+                    <FaChevronRight className='arrow' onClick={handleRight}/>
                 </div>
 
             </div>
