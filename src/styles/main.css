@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 
 .wrapper{
-  /* position: absolute; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,67 +14,54 @@
 
 /* Блок видео */
 .video-cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 47vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 47vh;
 }
 
 video {
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .slider-cont {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    min-width: 100%;
-    max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  max-width: 100%;
 }
-
-/* #slide1{
-  background-color: pink;
-}
-
-#slide2{
-  background-color: yellow;
-}
-
-#slide3{
-  background-color: purple;
-} */
 
 .slider-box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 30%;
-    height: 100%;
-    /* background-color: purple; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 30%;
+  height: 100%;
 }
 
 .image-box {
-    position: relative;
-    display: flex;
-    width: 120%;
-    height: 70%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    cursor: pointer;
+  position: relative;
+  display: flex;
+  width: 120%;
+  height: 70%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
 }
 
 .title-cont {
@@ -86,8 +72,6 @@ video {
   justify-content: flex-start;
   width: 100%;
   height: 10%;
-
-  /* background-color: aquamarine; */
 }
 
 .title-cont span {
@@ -138,7 +122,6 @@ video {
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  /* background: linear-gradient(90deg, #FFC165 58%, #FFF 42%); */
   background: 
   linear-gradient(90deg,#FFC165 75%,#fff 0) 
   var(--_p,100%)/200% no-repeat;
@@ -146,7 +129,7 @@ video {
 }
 
 .promo-cont-active{
---_p: 78%;
+  --_p: 78%;
 }
 
 .top-cont {
@@ -157,7 +140,6 @@ video {
   justify-content: center;
   height: 80%;
   width: 100%;
-  /* background-color: pink; */
 }
 
 .bottom-cont {
@@ -168,7 +150,6 @@ video {
   justify-content: center;
   height: 20%;
   width: 100%;
-  /* background-color: rgb(108, 108, 255); */
 }
 
 .third-box {
@@ -179,9 +160,7 @@ video {
   justify-content: center;
   height: 100%;
   width: 33.33%;
-  /* background-color: rgb(108, 255, 113); */
 }
-
 
 .brand-name-cont {
   display: flex;
@@ -222,7 +201,6 @@ video {
   justify-content: center;
   width: 50%;
   height: 50px;
-  /* background-color: yellow; */
   margin-left: 40%;
 }
 
@@ -254,14 +232,14 @@ video {
 }
 
 .main-image {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    background-image: url('../images/shoes/mainimg.png');
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url('../images/shoes/mainimg.png');
 }
 
 .third-box-cont{
@@ -291,6 +269,7 @@ video {
   margin-left: 2%;
   margin-right: 2%;
 }
+
 .rouned-item{
   font-size: 18px;
   cursor: pointer;
@@ -305,16 +284,19 @@ video {
   border-radius: 31px;
   box-shadow: 9px 9px 24px 1px rgba(0, 0, 0, .25  );
 }
+
 .rouned-item-active{
   width: 265px;
   height: 95.4px;
 }
+
 .photo-cont{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 60%;
 }
+
 .photo{
   margin-left: 6%;
   position: absolute;
@@ -324,19 +306,23 @@ video {
   background-repeat: no-repeat;
 }
 
-#ph1{
+#ph1 {
   background-image: url('../images/shoes/nike1.png');
 }
-#ph2{
+
+#ph2 {
   background-image: url('../images/shoes/nike2.png');
 }
-#ph3{
+
+#ph3 {
   background-image: url('../images/shoes/nike3.png');
 }
-#ph4{
+
+#ph4 {
   background-image: url('../images/shoes/nike4.png');
 }
-#ph5{
+
+#ph5 {
   background-image: url('../images/shoes/nike5.png');
 }
 
@@ -357,7 +343,6 @@ video {
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  /* background: linear-gradient(270deg, #65A8A8 58%, #FFF 42%); */
   background: 
   linear-gradient(90deg,#FFF 65%,#65A8A8 0%) 
   var(--_p,100%)/200% no-repeat;
@@ -365,7 +350,16 @@ video {
 }
 
 .object-cont-active{
---_p: 80%;
+  --_p: 80%;
+}
+
+.object-cont-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 30%;
 }
 
 .object-cont-right {
@@ -377,7 +371,44 @@ video {
   width: 60%;
   height: 100%;
   right: 0;
-  /* background-color: pink; */
+}
+
+.button-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+
+.button-cont span {
+  width: 58%;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.button-circle {
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;  
+  height: 32px;
+  border: 1px solid #000;
+  border-radius: 100% 100% 100% 100%;
+  cursor: pointer;
+}
+
+.button-circle:hover {
+  background-color: #000;
+}
+
+.button-circle:hover #circledButton {
+  color: #fff;
 }
 
 .object-image {
@@ -399,7 +430,7 @@ video {
   height: 55%;
   width: 65%;
   margin-top: 6%;
-  
+  margin-right: 4%;
 }
 
 .canvas {
@@ -436,11 +467,9 @@ video {
 
 .radius {
   position: absolute;
-  width: 16em;  /* ширина в два раза меньше высоты, иначе получится полуовал */
+  width: 16em;
   height: 32em;
   border: 2px solid #fff;
-  /* border-top-right-radius: 100%;
-  border-bottom-right-radius: 100%; */
   border-radius: 0 100% 100% 0 / 0 50% 50% 0;
   border-left-color: transparent;
   background: transparent;
@@ -467,15 +496,16 @@ video {
   margin-top: -3px;
   margin-left: 18%;
 }
+
 #dot-middle {
   margin-top: 97%;
   margin-left: 97%;
 }
+
 #dot-bottom {
   margin-top: 194%;
   margin-left: 18%;
 }
-
 
 /* Ленты с надписями */
 .sale-string-cont {
@@ -526,36 +556,6 @@ video {
   margin-bottom: 50px;
   background: #C5F38B;
   transform: rotate(-1.77deg);
-}
-
-/* #scroll-text {
-  overflow: hidden;
-  -moz-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  
-  -moz-animation: my-animation 15s linear infinite;
-  -webkit-animation: my-animation 15s linear infinite;
-  animation: my-animation 15s linear infinite;
-} */
-
-/* for Chrome */
-@-webkit-keyframes my-animation {
-  from { -webkit-transform: translateX(100%); }
-  to { -webkit-transform: translateX(-100%); }
-}
-
-@keyframes my-animation {
-  from {
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-  to {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
 }
 
 .basketball-cont {
@@ -614,7 +614,6 @@ video {
 .basketball-image button:hover {
   width: 160px;
   height: 37px;
-
   font-size: 21px;
 }
 
@@ -657,7 +656,7 @@ video {
   font-size: 36px;
   line-height: 54px;
   letter-spacing: 0.105em;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 .form-input-cont {
@@ -693,7 +692,7 @@ video {
   font-size: 20px;
   line-height: 23px;
   text-align: left;
-  color: #888888;
+  color: #888;
 }
 
 .input-cont input:focus {
@@ -733,7 +732,7 @@ video {
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.07em;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 .form-image-cont {

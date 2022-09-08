@@ -1,3 +1,4 @@
+import {FaChevronRight} from 'react-icons/fa'
 import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
 import Slider from '../components/slider/slider'
@@ -235,9 +236,17 @@ function Main() {
 
             {/* 3Д карусель */}
             <div className='object-cont' id='green'>
-                <div className='object-cont-right'>
-                    {/* <div className='object-image'></div> */}
 
+                <div className='object-cont-left'>
+                    <div className='button-cont'>
+                        <span>ORDER NOW</span>
+                        <div className='button-circle'>
+                            <FaChevronRight id='circledButton'/>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='object-cont-right'>
                     <div className='canvas-cont'>
                         <Canvas className='canvas' camera={camera}>
                             {/* Настройки сцены */}
