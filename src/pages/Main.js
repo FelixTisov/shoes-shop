@@ -49,6 +49,7 @@ function Main() {
 
     const [model, setModel] = useState(models[0])
 
+    // Смена 3д-модели
     const handleDotClick = (index, id) => {
 
         setModel(models[index])
@@ -59,6 +60,19 @@ function Main() {
         // prevDot.classList.remove("dot-active")
         // currentDot.classList.add("dot-active")
 
+    }
+
+    // Анимация кнопки Order Now
+    const arrowOffset = () => {
+        const circleArrow = document.querySelector('.button-circle')
+        circleArrow.animate([
+            {transform: 'translate(0)'},
+            {transform: 'translate(10px)'},
+            {transform: 'translate(0)'}
+          ],{
+            duration: 250,
+            iterations: 1,
+          })
     }
 
     return(
@@ -240,7 +254,7 @@ function Main() {
                 <div className='object-cont-left'>
                     <div className='button-cont'>
                         <span>ORDER NOW</span>
-                        <div className='button-circle'>
+                        <div className='button-circle' onClick={() => arrowOffset()}>
                             <FaChevronRight id='circledButton'/>
                         </div>
                     </div>
