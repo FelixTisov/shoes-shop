@@ -1,0 +1,11 @@
+Model Information:
+* title:	Nike Dunk Dusty Olive Metashape
+* source:	https://sketchfab.com/3d-models/nike-dunk-dusty-olive-metashape-a9acc1e575bd43f683643c824d507bfe
+* author:	ryanbair (https://sketchfab.com/ryanbair)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Nike Dunk Dusty Olive Metashape" (https://sketchfab.com/3d-models/nike-dunk-dusty-olive-metashape-a9acc1e575bd43f683643c824d507bfe) by ryanbair (https://sketchfab.com/ryanbair) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
