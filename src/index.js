@@ -9,6 +9,7 @@ root.render(
   <React.StrictMode>
     <Main/>
   </React.StrictMode>
+  
 );
 
 reportWebVitals();

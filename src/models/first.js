@@ -13,7 +13,7 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('/raw-models/first/scene.gltf')
   return (
     <group {...props} dispose={null}>
-      <group group rotation={[-Math.PI / 2, 0, 0]} scale={0.28} position={[-0.3, -17.7, 16.5]}>
+      <group group rotation={[-Math.PI / 2, 0, 1.8]} scale={0.28} position={[16, -17.8, -3.5]}>
         <mesh geometry={nodes.Object_2.geometry} material={materials.tex_u1_v1}/>
       </group>
     </group>

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {FaChevronRight} from 'react-icons/fa'
 import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
@@ -11,10 +12,10 @@ import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 
 import First from '../models/first'
+import Second from '../models/second'
 import Third from '../models/third'
-import { useState } from 'react'
 
-const models = [First, Third]
+
 
 /* Настройки камеры */
 let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000 );
@@ -47,19 +48,58 @@ window.onscroll = function () {
 
 function Main() {
 
-    const [model, setModel] = useState(models[0])
+    const image1 = require('../images/shoes/nike11.png')
+    const image2 = require('../images/shoes/nike12.png')
+    const image3 = require('../images/shoes/nike13.png')
+    const image4 = require('../images/shoes/nike14.png')
+
+    const promoImages = [image1, image2, image3, image4]
+    const [shopImage, setShopImage] = useState(promoImages[0])
+
+    const models = [Third, First, Second]
+    const [model, setModel] = useState(models[1])
 
     // Смена 3д-модели
-    const handleDotClick = (index, id) => {
+    const handleDotClick = async (index, id) => {
 
         setModel(models[index])
+        console.log(model)
 
-        // let currentDot = document.getElementById(id);
-        // let prevDot = document.querySelector('.dot-active')
+        let prevDot = document.querySelector('.dot-active')
+        prevDot.classList.remove("dot-active")
 
-        // prevDot.classList.remove("dot-active")
-        // currentDot.classList.add("dot-active")
+        let currentDot = document.getElementById(id);
+        currentDot.classList.add("dot-active")
 
+        animateDotTop()
+        
+        setTimeout(() => {
+            currentDot.classList.remove("dot-active")
+            prevDot.classList.add("dot-active")
+        }, 700)
+        
+    }
+
+    // Прокрутка дуги выбора вниз
+    const animateDotTop = () => {
+
+        let dotTop = document.getElementById('box-dot-top')
+        dotTop.animate([
+            {transform: 'rotate(0deg) translateX(0px) translateY(0px)'},
+            {transform: 'rotate(43deg) translateX(320px) translateY(45px)'}
+        ], {
+            duration: 700,
+            iterations: 1,
+        })
+
+        let dotMiddle = document.getElementById('box-dot-middle')
+        dotMiddle.animate([
+            {transform: 'rotate(0deg) translateX(0px) translateY(0px)'},
+            {transform: 'rotate(41deg) translateX(7px) translateY(319px)'}
+        ], {
+            duration: 700,
+            iterations: 1,
+        })
     }
 
     // Анимация кнопки Order Now
@@ -74,6 +114,18 @@ function Main() {
             iterations: 1,
           })
     }
+
+    // Смена текущего товара
+    const chooseItem = (index) => {
+        let prevItem = document.querySelector('.rounded-item-active')
+        prevItem.classList.remove('rounded-item-active')
+
+        let currentItem = document.getElementById(index);
+        currentItem.classList.add('rounded-item-active')
+
+        var number = index.slice(-1)
+        setShopImage(promoImages[number])
+    } 
 
     return(
         <div className='wrapper'>
@@ -186,7 +238,7 @@ function Main() {
                     </div>
 
                     <div className='third-box'>
-                        <div className='main-image'></div>
+                        <div className='main-image' style={{ backgroundImage: `url(${shopImage})` }}></div>
                     </div>
 
                     <div className='third-box'>
@@ -213,7 +265,7 @@ function Main() {
                 <div className='bottom-cont'>
 
                         <div class="rounded-cont">
-                            <div class="rouned-item rouned-item-active">
+                            <div class="rounded-item rounded-item-active" id='item0' onClick={() => chooseItem('item0')}>
                                 <div class="photo-cont" >
                                     <div class="photo" id="ph1"></div>
                                 </div>
@@ -221,7 +273,7 @@ function Main() {
                             </div>
                         </div>
                         <div class="rounded-cont">
-                            <div class="rouned-item">
+                            <div class="rounded-item" id='item1' onClick={() => chooseItem('item1')}>
                                 <div class="photo-cont" >
                                     <div class="photo" id="ph2"></div>
                                 </div>
@@ -229,7 +281,7 @@ function Main() {
                             </div>
                         </div>
                         <div class="rounded-cont">
-                            <div class="rouned-item">
+                            <div class="rounded-item" id='item2' onClick={() => chooseItem('item2')}>
                                 <div class="photo-cont" >
                                     <div class="photo" id="ph3"></div>
                                 </div>
@@ -237,7 +289,7 @@ function Main() {
                             </div>
                         </div>
                         <div class="rounded-cont">
-                            <div class="rouned-item">
+                            <div class="rounded-item" id='item3' onClick={() => chooseItem('item3')}>
                                 <div class="photo-cont" >
                                     <div class="photo" id="ph4"></div>
                                 </div>
@@ -282,15 +334,26 @@ function Main() {
                                 <meshPhongMaterial attach="material" color="hotpink" />
                             </mesh> */}
                             
-                            {model}
+                            {/* Текущая 3д модель */}
+                            { model }
 
                         </Canvas>
                     </div>
                     
                     <div className='radius'>
-                        <div className='dot' id='dot-top' onClick={() => handleDotClick(0, 'dot-top')}/>
-                        <div className='dot' id='dot-middle' onClick={() => handleDotClick(1, 'dot-middle')}/>
-                        <div className='dot' id='dot-bottom'/>
+
+                        <div className='box-dot' id='box-dot-top'>
+                            <div className='dot' id='dot-top'  onClick={() => handleDotClick(0, 'dot-top')}/>
+                        </div>
+
+                        <div className='box-dot' id='box-dot-middle'>
+                            <div className='dot dot-active' id='dot-middle'  onClick={() => handleDotClick(1, 'dot-middle')}/>
+                        </div>
+
+                        <div className='box-dot' id='box-dot-bottom'>
+                            <div className='dot' id='dot-bottom' onClick={() => handleDotClick(2, 'dot-bottom')} />
+                        </div>
+
                     </div>
 
                     <div className='object-cont-tools'>

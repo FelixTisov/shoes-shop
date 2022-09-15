@@ -234,12 +234,14 @@ video {
 .main-image {
   position: relative;
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom;
-  background-image: url('../images/shoes/mainimg.png');
+  background-position: center;
+  background-position-y: 45%;
+  transform: rotate(-30deg);
+  /* background-image: url('../images/shoes/mainimg.png'); */
 }
 
 .third-box-cont{
@@ -270,7 +272,7 @@ video {
   margin-right: 2%;
 }
 
-.rouned-item{
+.rounded-item{
   font-size: 18px;
   cursor: pointer;
   display: flex;
@@ -285,7 +287,7 @@ video {
   box-shadow: 9px 9px 24px 1px rgba(0, 0, 0, .25  );
 }
 
-.rouned-item-active{
+.rounded-item-active{
   width: 265px;
   height: 95.4px;
 }
@@ -307,23 +309,19 @@ video {
 }
 
 #ph1 {
-  background-image: url('../images/shoes/nike1.png');
+  background-image: url('../images/shoes/nike11.png');
 }
 
 #ph2 {
-  background-image: url('../images/shoes/nike2.png');
+  background-image: url('../images/shoes/nike12.png');
 }
 
 #ph3 {
-  background-image: url('../images/shoes/nike3.png');
+  background-image: url('../images/shoes/nike13.png');
 }
 
 #ph4 {
-  background-image: url('../images/shoes/nike4.png');
-}
-
-#ph5 {
-  background-image: url('../images/shoes/nike5.png');
+  background-image: url('../images/shoes/nike14.png');
 }
 
 .price{
@@ -429,7 +427,7 @@ video {
   justify-content: center;
   height: 55%;
   width: 65%;
-  margin-top: 6%;
+  margin-top: 5%;
   margin-right: 4%;
 }
 
@@ -437,6 +435,7 @@ video {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  margin-top: -5%;
   /* background-color: pink; */
 }
 
@@ -476,35 +475,55 @@ video {
   margin-right: -50%;
 }
 
+.box-dot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+}
+
 .dot {
   cursor: pointer;
-  position: absolute;
   height: 18px;
   width: 18px;
   background-color: #FFF;
   border-radius: 50%;
-  display: inline-block;
-}
-
-.dot-active {
-  height: 28px;
-  width: 28px;
+  display: block;
   
 }
 
-#dot-top {
-  margin-top: -3px;
-  margin-left: 18%;
+/* @keyframes Orbita {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(0px) translateY(0px);
+    
+  }
+  100% {
+    -webkit-transform: rotate(41deg) translateX(7px) translateY(319px);
+  }
+} */
+
+.dot-active {
+  height: 26px;
+  width: 26px;
 }
 
-#dot-middle {
-  margin-top: 97%;
-  margin-left: 97%;
+#box-dot-top {
+  margin-top: -10px;
+  margin-left: 15%;
+  
 }
 
-#dot-bottom {
-  margin-top: 194%;
-  margin-left: 18%;
+#box-dot-middle {
+  margin-top: 96%;
+  margin-left: 94.5%;
+  /* animation: Orbita 2s linear infinite; */
+}
+
+#box-dot-bottom {
+  margin-top: 192%;
+  margin-left: 15%;
 }
 
 /* Ленты с надписями */

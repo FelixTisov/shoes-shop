@@ -13,7 +13,7 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('/raw-models/third/scene.gltf')
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 1.35]} scale={16} position={[-0.3, -1.05, 0]}>
+      <group rotation={[-Math.PI / 2, 0, 3.1]} scale={16} position={[0, -1.05, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <mesh geometry={nodes.NikeSB_Charge002_NikeSB_Charge002_0.geometry} material={materials['NikeSB_Charge.002']} />
           <mesh geometry={nodes.NikeSB_Charge002_NikeSB_Charge002_0_1.geometry} material={materials['NikeSB_Charge.002']} />
