@@ -11,11 +11,10 @@ import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 
+/* Импорт 3-д моделей */ 
 import First from '../models/first'
 import Second from '../models/second'
 import Third from '../models/third'
-
-
 
 /* Настройки камеры */
 let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000 );
@@ -23,8 +22,7 @@ camera.position.x = 7  //вокруг центра по плоскости
 camera.position.y = 0 //по вертикали
 camera.position.z = 0
 
-const saleString = 'SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25%'
-
+/* Сдвиг бг при прокрутке */ 
 window.onscroll = function () {
     let pos = window.pageYOffset;
     let block1 = document.getElementById("yellow");
@@ -46,6 +44,8 @@ window.onscroll = function () {
     }
 }
 
+const saleString = 'SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25%'
+
 function Main() {
 
     const image1 = require('../images/shoes/nike11.png')
@@ -56,14 +56,13 @@ function Main() {
     const promoImages = [image1, image2, image3, image4]
     const [shopImage, setShopImage] = useState(promoImages[0])
 
-    const models = [Third, First, Second]
+    const [models] = useState([Third, First, Second])
     const [model, setModel] = useState(models[1])
 
     // Смена 3д-модели
     const handleDotClick = async (index, id) => {
 
         setModel(models[index])
-        console.log(model)
 
         let prevDot = document.querySelector('.dot-active')
         prevDot.classList.remove("dot-active")
@@ -71,17 +70,31 @@ function Main() {
         let currentDot = document.getElementById(id);
         currentDot.classList.add("dot-active")
 
-        animateDotTop()
+        switch (id) {
+            case 'dot-top':
+                animateDotTop(index)
+                models.unshift(...models.splice(2,1))
+                break;
+            case 'dot-bottom':
+                animateDotBottom()
+                models.push(...models.splice(0,1))
+                break;
+            default:
+                break;
+        }
         
         setTimeout(() => {
             currentDot.classList.remove("dot-active")
             prevDot.classList.add("dot-active")
-        }, 700)
+        }, 730)  
         
     }
 
     // Прокрутка дуги выбора вниз
     const animateDotTop = () => {
+
+        let oppositDot = document.getElementById('box-dot-bottom')
+        oppositDot.style.visibility='hidden'
 
         let dotTop = document.getElementById('box-dot-top')
         dotTop.animate([
@@ -100,6 +113,41 @@ function Main() {
             duration: 700,
             iterations: 1,
         })
+
+        setTimeout(() => {
+            oppositDot.style.visibility='visible'
+        }, 700)
+        
+    }
+
+    // Прокрутка дуги выбора вверх
+    const animateDotBottom = () => {
+
+        let oppositDot = document.getElementById('box-dot-top')
+        oppositDot.style.visibility='hidden'
+
+        let dotMiddle = document.getElementById('box-dot-middle')
+        dotMiddle.animate([
+            {transform: 'rotate(0deg) translateX(0px) translateY(0px)'},
+            {transform: 'rotate(-38deg) translateX(4px) translateY(-323px)'}
+        ], {
+            duration: 700,
+            iterations: 1,
+        })
+
+        let dotTop = document.getElementById('box-dot-bottom')
+        dotTop.animate([
+            {transform: 'rotate(0deg) translateX(0px) translateY(0px)'},
+            {transform: 'rotate(-43deg) translateX(320px) translateY(-45px)'}
+        ], {
+            duration: 700,
+            iterations: 1,
+        })
+
+        setTimeout(() => {
+            oppositDot.style.visibility='visible'
+        }, 700)
+
     }
 
     // Анимация кнопки Order Now
@@ -347,7 +395,7 @@ function Main() {
                         </div>
 
                         <div className='box-dot' id='box-dot-middle'>
-                            <div className='dot dot-active' id='dot-middle'  onClick={() => handleDotClick(1, 'dot-middle')}/>
+                            <div className='dot dot-active' id='dot-middle' />
                         </div>
 
                         <div className='box-dot' id='box-dot-bottom'>
