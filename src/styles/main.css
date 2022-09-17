@@ -612,8 +612,16 @@ video {
   background-image: url('../images/shoes/basketball.jpg');
 }
 
-.basketball-image button {
+.basketball-image-button-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 2%;
+  width: 160px;
+  height: 37px;
+}
+
+.basketball-image button {
   cursor: pointer;
   border: none;
   width: 147px;

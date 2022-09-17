@@ -429,7 +429,9 @@ function Main() {
             <div className='basketball-cont'>
                 <h2>Nike Basketball</h2>
                 <div className='basketball-image'>
-                    <button>Explore now</button>
+                    <div className='basketball-image-button-cont'>
+                        <button>Explore now</button>
+                    </div>        
                 </div>
             </div>
 
