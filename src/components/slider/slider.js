@@ -12,9 +12,17 @@ function Slider({children}) {
     const handleLeft = () => {
 
         setOffset((currentOffset) => {
-            return Math.min((currentOffset + offsetIndex), 0)
-        })
-        setDotActive(-offset-1)
+            
+            let newOffset = currentOffset + offsetIndex
+            if(newOffset>0) {
+                setDotActive(2)
+                return -2
+            }          
+            else {
+                setDotActive(-offset-1)
+                return newOffset
+            } 
+        })      
 
     }
     
@@ -22,10 +30,16 @@ function Slider({children}) {
     const handleRight = () => {
 
         setOffset((currentOffset) => {
-            const maxOffset = -(offsetIndex * 2)
-            return Math.max((currentOffset - offsetIndex), maxOffset)
+            let newOffset = currentOffset - offsetIndex
+            if(newOffset<-2) {
+                setDotActive(0)
+                return 0
+            }
+            else {
+                setDotActive(-offset+1)
+                return newOffset
+            } 
         })
-        setDotActive(-offset+1)
 
     }
 
