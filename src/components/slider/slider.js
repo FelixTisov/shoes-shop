@@ -11,8 +11,7 @@ function Slider({children}) {
     // Нажатие влево
     const handleLeft = () => {
 
-        setOffset((currentOffset) => {
-            
+        setOffset((currentOffset) => {     
             let newOffset = currentOffset + offsetIndex
             if(newOffset>0) {
                 setDotActive(2)
@@ -43,6 +42,13 @@ function Slider({children}) {
 
     }
 
+    // Прокрутка при нажатии на индикатор текщего слайда
+    const handleRoundClick = (index) => {
+        setDotActive(index)
+        setOffset(-index)
+    }
+
+    // Изменения стиля аквтиного индикатора
     function setDotActive(index) {
         if(index <= 2 && index >=0) {
             let currentDot = document.getElementById(index);
@@ -81,9 +87,9 @@ function Slider({children}) {
             {/* Указатели слайда */}
             <div className='circles-cont'>
                 <div className='circles'>
-                    <div className='round round-active' id='0'></div>
-                    <div className='round' id='1'></div>
-                    <div className='round' id='2'></div>
+                    <div className='round round-active' id='0' onClick={() => handleRoundClick(0)}></div>
+                    <div className='round' id='1' onClick={() => handleRoundClick(1)}></div>
+                    <div className='round' id='2' onClick={() => handleRoundClick(2)}></div>
                 </div>
             </div>
 
