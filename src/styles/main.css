@@ -361,17 +361,6 @@ video {
   width: 30%;
 }
 
-.object-cont-right {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  width: 60%;
-  height: 100%;
-  right: 0;
-}
-
 .button-cont {
   display: flex;
   flex-direction: row;
@@ -409,111 +398,6 @@ video {
 
 .button-circle:hover #circledButton {
   color: #fff;
-}
-
-.object-image {
-  display: flex;
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 50%;
-  width: 50%;
-  background-image: url('../images/shoes/sale.png');
-}
-
-.canvas-cont {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  height: 55%;
-  width: 65%;
-  margin-top: 5%;
-  margin-right: 4%;
-}
-
-.canvas {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  margin-top: -5%;
-  /* background-color: pink; */
-}
-
-.object-cont-tools{
-  display: flex;
-  margin-top: 5%;
-  margin-right: 35%;
-  flex-direction: row;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width: 60%;
-  height: 30px;
-}
-
-.object-cont-button {
-  color: #fff;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 28px;
-  margin-left: 5%;
-  margin-right: 5%;
-  text-decoration: underline;
-  cursor: pointer;
-  user-select: none;
-}
-
-.radius {
-  position: absolute;
-  width: 16em;
-  height: 32em;
-  border: 2px solid #fff;
-  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
-  border-left-color: transparent;
-  background: transparent;
-  margin-right: -50%;
-}
-
-.box-dot {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  width: 30px;
-}
-
-.dot {
-  cursor: pointer;
-  height: 18px;
-  width: 18px;
-  background-color: #FFF;
-  border-radius: 50%;
-  display: block;
-} 
-
-.dot-active {
-  height: 26px;
-  width: 26px;
-}
-
-#box-dot-top {
-  margin-top: -10px;
-  margin-left: 15%;
-}
-
-#box-dot-middle {
-  margin-top: 96%;
-  margin-left: 94.5%;
-}
-
-#box-dot-bottom {
-  margin-top: 192%;
-  margin-left: 15%;
 }
 
 /* Ленты с надписями */
