@@ -121,11 +121,11 @@ function Carousel() {
                         maxPolarAngle={Math.PI/2.5} 
                         enabled={true} 
                         position={[7, 7, 7]}
-                        ro
                         maxDistance={6} 
                         minDistance={6} 
                         autoRotate={true}
-                        autoRotateSpeed={5} 
+                        autoRotateSpeed={5}      
+                        enablePan={false}
                     />
                     <ambientLight color={'#fff'} intensity={0.6}/>
                     
