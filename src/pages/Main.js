@@ -437,7 +437,7 @@ function Main() {
 
             {/* Форма обратной связи */}
             <div className='form-container'>
-                <div className='form'>
+                <form className='form'>
                     <div className='form-title-cont'>
                         <span>Subscribe to our</span>
                         <span>news and sales</span>
@@ -446,11 +446,11 @@ function Main() {
                         <div className='input-cont'>
                             <input placeholder='Enter your email here' type="email"/>
                         </div>
-                        <div className='form-button'>
+                        <button type='submit' className='form-button'>
                             <span>Subscribe!</span>
-                        </div>
+                        </button>
                     </div>
-                </div>
+                </form>
                 <div className='form-image-cont'>
 
                 </div>

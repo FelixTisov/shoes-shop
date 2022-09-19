@@ -229,6 +229,7 @@ video {
   font-size: 28px;
   color: #000;
   cursor: pointer;
+  user-select: none;
 }
 
 .main-image {
@@ -387,6 +388,7 @@ video {
   font-size: 24px;
   letter-spacing: 0.04em;
   color: #000000;
+  user-select: none;
 }
 
 .button-circle {
@@ -462,6 +464,7 @@ video {
   margin-right: 5%;
   text-decoration: underline;
   cursor: pointer;
+  user-select: none;
 }
 
 .radius {
@@ -491,18 +494,7 @@ video {
   background-color: #FFF;
   border-radius: 50%;
   display: block;
-  
-}
-
-/* @keyframes Orbita {
-  0% {
-    -webkit-transform: rotate(0deg) translateX(0px) translateY(0px);
-    
-  }
-  100% {
-    -webkit-transform: rotate(41deg) translateX(7px) translateY(319px);
-  }
-} */
+} 
 
 .dot-active {
   height: 26px;
@@ -512,13 +504,11 @@ video {
 #box-dot-top {
   margin-top: -10px;
   margin-left: 15%;
-  
 }
 
 #box-dot-middle {
   margin-top: 96%;
   margin-left: 94.5%;
-  /* animation: Orbita 2s linear infinite; */
 }
 
 #box-dot-bottom {
@@ -557,6 +547,7 @@ video {
   line-height: 23px;
   text-align: center;
   color: #000000;
+  user-select: none;
 }
 
 #blue-string {
@@ -636,6 +627,7 @@ video {
   line-height: 21px;
   text-align: center;
   color: #444;
+  user-select: none;
 }
 
 .basketball-image button:hover {
@@ -710,16 +702,18 @@ video {
   width: 96%;
   height: 75%;
   border: none;
+  font-size: 16px;
 }
 
 .input-cont input::placeholder {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 23px;
   text-align: left;
   color: #888;
+  user-select: none;
 }
 
 .input-cont input:focus {
@@ -727,7 +721,7 @@ video {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 23px;
   text-align: left;
   color: #000;
@@ -738,6 +732,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
   width: 30%;
   height: 100%;
   cursor: pointer;
@@ -760,6 +755,7 @@ video {
   text-align: center;
   letter-spacing: 0.07em;
   color: #FFF;
+  user-select: none;
 }
 
 .form-image-cont {
