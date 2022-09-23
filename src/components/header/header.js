@@ -1,4 +1,3 @@
-/* Шапка */ 
 import './header.css'
 
 function Header() {

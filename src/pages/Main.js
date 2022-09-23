@@ -15,10 +15,9 @@ window.onscroll = function () {
     let pos = window.pageYOffset;
     let block1 = document.getElementById("yellow");
     let block2 = document.getElementById("green");
-    // alert(pos)
 
     // Анимация желтого блока
-    if (pos >= 310) {
+    if (pos >= 320) {
         block1.classList.add("promo-cont-active");
     }
     else {
@@ -26,7 +25,7 @@ window.onscroll = function () {
     }
 
     // Анимация зеленого блока
-    if (pos <= 1100 ) {
+    if (pos <= 1110 ) {
         block2.classList.add("object-cont-active");
     }
     else {
