@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import {FaChevronRight} from 'react-icons/fa'
+import { FaChevronRight } from 'react-icons/fa'
+import { promoObjects } from '../components/promo_objects'
 import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
 import Slider from '../components/slider/slider'
@@ -10,10 +11,13 @@ import '../styles/main.css'
 
 /* Сдвиг бг при прокрутке */ 
 window.onscroll = function () {
+
     let pos = window.pageYOffset;
     let block1 = document.getElementById("yellow");
     let block2 = document.getElementById("green");
     // alert(pos)
+
+    // Анимация желтого блока
     if (pos >= 310) {
         block1.classList.add("promo-cont-active");
     }
@@ -21,26 +25,22 @@ window.onscroll = function () {
         block1.classList.remove("promo-cont-active");
     }
 
+    // Анимация зеленого блока
     if (pos <= 1100 ) {
         block2.classList.add("object-cont-active");
-        // block1.classList.remove("promo-cont-active");
     }
     else {
         block2.classList.remove("object-cont-active");
     }
+
 }
 
 const saleString = 'SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25%'
 
 function Main() {
 
-    const image1 = require('../images/shoes/nike11.png')
-    const image2 = require('../images/shoes/nike12.png')
-    const image3 = require('../images/shoes/nike13.png')
-    const image4 = require('../images/shoes/nike14.png')
-
-    const promoImages = [image1, image2, image3, image4]
-    const [shopImage, setShopImage] = useState(promoImages[0])
+    // Текущий объект в промо-товарах
+    const [promoItem, setPromoItem] = useState(promoObjects[0])
 
     // Анимация кнопки Order Now
     const arrowOffset = () => {
@@ -64,7 +64,7 @@ function Main() {
         currentItem.classList.add('rounded-item-active')
 
         var number = index.slice(-1)
-        setShopImage(promoImages[number])
+        setPromoItem(promoObjects[number])
     } 
 
     return(
@@ -178,12 +178,12 @@ function Main() {
                     </div>
 
                     <div className='third-box'>
-                        <div className='main-image' style={{ backgroundImage: `url(${shopImage})` }}></div>
+                        <div className='main-image' style={{ backgroundImage: `url(${promoItem.image})` }}></div>
                     </div>
 
                     <div className='third-box'>
                         <div className='third-box-cont'>
-                            <span>AIR MAX</span>
+                            <span>{promoItem.title}</span>
                         </div>
                         <div className='third-box-cont' >
                             <div className='details-button'>
@@ -295,9 +295,7 @@ function Main() {
                         </button>
                     </div>
                 </form>
-                <div className='form-image-cont'>
-
-                </div>
+                <div className='form-image-cont'/>
             </div>
 
             <Footer/>
