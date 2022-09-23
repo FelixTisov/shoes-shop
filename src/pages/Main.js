@@ -189,11 +189,6 @@ function Main() {
                                 <div className='details-button-span-cont'>
                                     <p>Details</p>
                                 </div>
-                                <div className='details-button-arrow-cont'>
-                                    <div className='arrow'>
-                                        <div className='arrow-right' id='details-arrow-right'/>
-                                    </div>
-                                </div>
                             </div>
                         </div>       
                     </div>
