@@ -30,6 +30,81 @@ video {
   left: 0;
 }
 
+.wordCarousel {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	font-family: 'Roboto';
+    font-size: 5rem;
+	font-weight: 600;
+	color: #eee;
+}
+
+.left{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40%;
+	height: 92px;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	overflow: hidden;
+	position: relative;
+	height: 92px;
+}
+
+.wordCarousel p{
+	mix-blend-mode:color-dodge;
+	color: lightsalmon;
+}
+
+.swipe-item{
+	text-align: left;
+	 margin-left: -10%;
+	 height: 90px;
+	 margin-bottom: 0px;
+	 display: flex;
+}
+
+.swipe-item p{
+	margin-top: -1.2%;
+}
+
+.flip {
+	animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@keyframes flip3 {
+	0% {
+		margin-top: -200px;
+		}
+	5% {
+		margin-top: -180px;
+		}
+	33% {
+		margin-top: -180px;
+		}
+	38% {
+		margin-top: -90px;
+		}
+	66% {
+		margin-top: -90px;
+		}
+	71% {
+		margin-top: 0px;
+		}
+	99.99% {
+		margin-top: 0px;
+		}
+	100% {
+		margin-top: -270px;
+		}
+}
+
 .slider-cont {
   display: flex;
   flex-direction: row;
@@ -116,6 +191,11 @@ video {
   background-image: url('../images/slider/nike9.png');
 }
 
+/* Раздел скидки (только моб. вер.) */
+.sale-orange-cont {
+  display: none;
+}
+
 /* Промо раздел */
 .promo-cont {
   display: flex;
@@ -193,6 +273,7 @@ video {
   color: #FFF;
 }
 
+/* Кнопка details */
 .details-button {
   display: flex;
   position: relative;
@@ -214,17 +295,7 @@ video {
   width: 50%;
 }
 
-.details-button-arrow-cont {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100%;
-  width: 50%;
-}
-
-.details-button p {
+.details-button-span-cont p {
   font-family: 'Roboto';
   font-size: 28px;
   color: #000;
@@ -237,12 +308,13 @@ video {
   transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-.details-button p:hover {
+.details-button-span-cont p:hover {
   box-shadow: inset 0 100px 0 0 #000;
   border-radius: 5px;
   color: #fff;
 }
 
+/* Фото промо товара */
 .main-image {
   position: relative;
   display: flex;
@@ -264,12 +336,22 @@ video {
   height: 50%;
 }
 
-.third-box-cont span {
+.span-top {
+  display: flex;
+  position: relative;
+  margin-right: -20%;
+  
+}
+
+.span-top span {
   font-family: 'Anton';
   font-size: 64px;
   color: #000;
   margin-bottom: -55%;
-  margin-right: -20%;
+}
+
+.span-bottom {
+  display: none;
 }
 
 /* Промо товары */

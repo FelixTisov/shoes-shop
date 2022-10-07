@@ -102,3 +102,7 @@
     margin-top: 192%;
     margin-left: 15%;
 }
+
+.order-button {
+    display:none;
+}

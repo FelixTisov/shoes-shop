@@ -1,0 +1,31 @@
+@media only screen and (max-width: 640px) { 
+    /* Шапка */
+    header{
+        top: 0;   
+        position: fixed;
+        z-index: 5;
+        width: 100%;
+        background-color: #fff;
+        backdrop-filter: blur(4px);
+        height: 40px;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        padding-left: 5%;
+    }
+
+    /* Кнопки навигации */
+    .nav-items{
+        display: none;
+    }
+
+    /* Строка поиска */
+    .nav-btns {
+        display: none;
+    }
+
+}

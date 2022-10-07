@@ -3,6 +3,7 @@ import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import './carousel.css'
+import './carousel_mobile.css'
 
 /* Импорт 3-д моделей */ 
 import First from '../../models/first'
@@ -155,6 +156,13 @@ function Carousel() {
                 <span className='object-cont-button'>Compare</span>
                 <span className='object-cont-button'>Learn more</span>
                 <span className='object-cont-button'>To cart</span>
+            </div>
+
+            {/* Только для мобильной версии */}
+            <div className='order-button'>
+                <div className='details-button-span-cont'>
+                    <p>ORDER NOW</p>
+                </div>
             </div>
         </div>
     )

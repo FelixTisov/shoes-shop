@@ -5,9 +5,9 @@ import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
 import Slider from '../components/slider/slider'
 import Carousel from '../components/3d_carousel/carousel'
-import '../styles/animated.css'
 import '../styles/common.css'
 import '../styles/main.css'
+import '../styles/main_mobile.css'
 
 /* Сдвиг бг при прокрутке */ 
 window.onscroll = function () {
@@ -163,10 +163,16 @@ function Main() {
                 </div>
             </Slider>
 
+            {/* Раздел скидки (только моб. вер.) */}
+            <div className='sale-orange-cont'>
+                <span className='sale-first-line'>-25%</span>
+                <span className='sale-second-line'>NEW COLLECTION</span>
+            </div>
+
             {/* Промо раздел */}
             <div className='promo-cont' id='yellow'>
                 <div className='top-cont'>
-                    <div className='third-box'>
+                    <div className='third-box' id='left-third-cont'>
                         <div className='brand-name-cont'>
                             <span className='shadow-text'>NIKE</span>
                         </div>
@@ -182,7 +188,8 @@ function Main() {
 
                     <div className='third-box'>
                         <div className='third-box-cont'>
-                            <span>{promoItem.title}</span>
+                            <div className='span-top'><span>{promoItem.title}</span></div>
+                            <div className='span-bottom'><span>750$</span></div>
                         </div>
                         <div className='third-box-cont' >
                             <div className='details-button'>
@@ -251,7 +258,7 @@ function Main() {
             </div>
             
             {/* Ленты с надписями */}
-            <div className='sale-string-cont'>
+            {/* <div className='sale-string-cont'>
                 <div className='sale-string' id='blue-string'>
                     <div id="scroll-text"><p>{saleString}</p></div>
                 </div>
@@ -261,7 +268,7 @@ function Main() {
                 <div className='sale-string' id='corral-string'>
                     <div id="scroll-text"><p>{saleString}</p></div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Баскетбольная серия */}
             <div className='basketball-cont'>

@@ -1,4 +1,5 @@
 import './header.css'
+import './header_mobile.css'
 
 function Header() {
     return(
