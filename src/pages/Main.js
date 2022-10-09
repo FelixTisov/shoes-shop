@@ -258,7 +258,7 @@ function Main() {
             </div>
             
             {/* Ленты с надписями */}
-            {/* <div className='sale-string-cont'>
+            <div className='sale-string-cont'>
                 <div className='sale-string' id='blue-string'>
                     <div id="scroll-text"><p>{saleString}</p></div>
                 </div>
@@ -268,7 +268,7 @@ function Main() {
                 <div className='sale-string' id='corral-string'>
                     <div id="scroll-text"><p>{saleString}</p></div>
                 </div>
-            </div> */}
+            </div>
 
             {/* Баскетбольная серия */}
             <div className='basketball-cont'>

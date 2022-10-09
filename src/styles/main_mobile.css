@@ -340,4 +340,74 @@
     display: none;
   }
 
-  }
+  /* Ленты с надписями */
+.sale-string-cont {
+  height: 75px;
+}
+
+.sale-string {
+  height: 27px;
+}
+
+#blue-string {
+  margin-bottom: -25px;
+}
+
+#corral-string {
+  margin-bottom: 25px;
+}
+
+#green-string {
+  margin-bottom: 25px;
+}
+
+/* Баскетбольная коллекция */
+.basketball-cont h2 {
+  font-size: 28px;
+}
+.basketball-image {
+  width: 612px;
+  height: 344px;
+}
+
+/* Форма обратной связи */
+.form-container {
+  width: 100%;
+}
+
+.form {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+}
+
+.form-title-cont {
+  width: 85%;
+  height: 40%;
+}
+
+.form-title-cont span {
+  font-size: 28px;
+  line-height: 46px;
+}
+
+.form-input-cont {
+  width: 85%;
+}
+
+.form-button {
+  width: 35%;
+  background: #92703D;
+  transition: none;
+}
+
+.form-button span {
+  font-size: 18px;
+}
+
+.form-image-cont {
+  width: 100%;
+}
+
+}

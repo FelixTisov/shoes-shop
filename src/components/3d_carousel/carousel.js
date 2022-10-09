@@ -58,10 +58,23 @@ function Carousel() {
         let oppositDot = document.getElementById('box-dot-bottom')
         oppositDot.style.visibility='hidden'
 
+        let paramsTop = [] // Координаты для верхней точки
+        let paramsMiddle = [] // Координаты для средней точки
+
+        // Для мобильной версии
+        if(window.matchMedia("(max-width: 640px)").matches) {
+            paramsTop = [184, 26]
+            paramsMiddle = [9, 193]
+        } // Для десктопной
+        else {
+            paramsTop = [320, 45]
+            paramsMiddle = [7, 319]
+        }
+
         let dotTop = document.getElementById('box-dot-top')
         dotTop.animate([
             {transform: 'rotate(0deg) translateX(0px) translateY(0px)'},
-            {transform: 'rotate(43deg) translateX(320px) translateY(45px)'}
+            {transform: `rotate(43deg) translateX(${paramsTop[0]}px) translateY(${paramsTop[1]}px)`}
         ], {
             duration: 700,
             iterations: 1,
@@ -70,7 +83,7 @@ function Carousel() {
         let dotMiddle = document.getElementById('box-dot-middle')
         dotMiddle.animate([
             {transform: 'rotate(0deg) translateX(0px) translateY(0px)'},
-            {transform: 'rotate(41deg) translateX(7px) translateY(319px)'}
+            {transform: `rotate(41deg) translateX(${paramsMiddle[0]}px) translateY(${paramsMiddle[1]}px)`}
         ], {
             duration: 700,
             iterations: 1,
@@ -87,20 +100,33 @@ function Carousel() {
 
         let oppositDot = document.getElementById('box-dot-top')
         oppositDot.style.visibility='hidden'
+        
+        let paramsMiddle = [] // Координаты для средней точки
+        let paramsBottom = [] // Координаты для нижней точки
+
+        // Для мобильной версии
+        if(window.matchMedia("(max-width: 640px)").matches) {
+            paramsMiddle = [0, -181]
+            paramsBottom = [183, -26]
+        } // Для десктопной
+        else {
+            paramsMiddle = [4, -323]
+            paramsBottom = [320, -45]
+        }
 
         let dotMiddle = document.getElementById('box-dot-middle')
         dotMiddle.animate([
             {transform: 'rotate(0deg) translateX(0px) translateY(0px)'},
-            {transform: 'rotate(-38deg) translateX(4px) translateY(-323px)'}
+            {transform: `rotate(-38deg) translateX(${paramsMiddle[0]}px) translateY(${paramsMiddle[1]}px)`}
         ], {
             duration: 700,
             iterations: 1,
         })
 
-        let dotTop = document.getElementById('box-dot-bottom')
-        dotTop.animate([
+        let dotBottom = document.getElementById('box-dot-bottom')
+        dotBottom.animate([
             {transform: 'rotate(0deg) translateX(0px) translateY(0px)'},
-            {transform: 'rotate(-43deg) translateX(320px) translateY(-45px)'}
+            {transform: `rotate(-43deg) translateX(${paramsBottom[0]}px) translateY(${paramsBottom[1]}px)`}
         ], {
             duration: 700,
             iterations: 1,
