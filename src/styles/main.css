@@ -544,6 +544,7 @@ video {
   transform: rotate(-1.77deg);
 }
 
+/* Баскетбольная коллекция */
 .basketball-cont {
   margin-top: 3%;
   position: relative;
@@ -669,7 +670,6 @@ video {
 
 .input-cont {
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;

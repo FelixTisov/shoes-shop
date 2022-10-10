@@ -1,5 +1,5 @@
 /* Подвал */
-footer{
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +17,7 @@ hr {
     width: 90%;
 }
 
-#hr-bottom{
+#hr-bottom {
     margin-top: 3%;
 }
 

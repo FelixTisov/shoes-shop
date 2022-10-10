@@ -69,22 +69,22 @@ function Header() {
                 {/* Только для моб версии */}
                 <div className='menu-cont' style={{visibility: isVisible}}>
                     <div className='menu-nav'>
-                        <a id='current-page'>Home</a>
-                        <a>Catalog</a>
-                        <a>Brands</a>
-                        <a>Sports</a>
+                        <a href='#' id='current-page'>Home</a>
+                        <a href='#'>Catalog</a>
+                        <a href='#'>Brands</a>
+                        <a href='#'>Sports</a>
                     </div>
 
                     <div className='menu-icons-cont'>
-                        <div className="nav-element">
+                        <button className="nav-element">
                             <div className="search-icon"></div>
-                        </div>
-                        <div className="nav-element">
+                        </button>
+                        <button className="nav-element">
                             <div className="kart"></div>
-                        </div>
-                        <div className="nav-element">
+                        </button>
+                        <button className="nav-element">
                             <div className="user"></div>
-                        </div>
+                        </button>
                     </div>
 
                 </div>

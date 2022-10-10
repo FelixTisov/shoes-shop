@@ -1,20 +1,11 @@
 @media only screen and (max-width: 640px) {
     .main-cont {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
         width: 100%;
         height: 132px;
     }
       
     .carousel {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
         height: 98px; 
     }
       

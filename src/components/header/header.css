@@ -58,25 +58,16 @@ nav{
     cursor: pointer;
 }
 
+/* Строка поиска */
 .nav-btns{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 20%;
-    height: 100%;
-    right: 0;
-}
-
-/* Строка поиска */
-.nav-btns {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: flex-end;
+    position: absolute;
     width: 30%;
     height: 100%;
+    right: 0;
 }
 
 .search-cont{

@@ -3,119 +3,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 
 @media only screen and (max-width: 640px) {
-    .wrapper{
+  /* Блок видео */
+  .video-cont {
+      height: 150px;
+      margin-top: 40px;
+  }
+
+  .wordCarousel {
+      font-size: 40px;
+  }
+  
+  .left{
+      height: 46px;
+  }
+  
+  .right {
+      height: 46px;
+  }
+  
+  .wordCarousel p{
+      mix-blend-mode:color-dodge;
+      color: lightsalmon;     
+  }
+    
+  .swipe-item{
+      margin-left: -15%;
+  }
+
+  /* Слайдер */
+  .title-cont span {
+      font-size: 14px;
+  }
+
+  /* Раздел скидки (только моб. вер.) */
+  .sale-orange-cont {
       display: flex;
+      position: relative;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      background-color: #FFC165;
       width: 100%;
-      background-color: #fff;
-      overflow-x: hidden;
-    }
-
-    /* Блок видео */
-    .video-cont {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 150px;
-        margin-top: 40px;
-    }
-  
-    video {
-        -o-object-fit: cover;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-    }
-  
-    .wordCarousel {
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        font-family: 'Roboto';
-        font-size: 40px;
-        font-weight: 600;
-        color: #eee;
-    }
+      height: 78px;
+  }
     
-    .left{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40%;
-        height: 46px;
-    }
-    
-    .right {
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        overflow: hidden;
-        position: relative;
-        height: 46px;
-    }
-    
-    .wordCarousel p{
-        mix-blend-mode:color-dodge;
-        color: lightsalmon;     
-    }
-    
-    .swipe-item{
-        text-align: left;
-        margin-left: -15%;
-        height: 90px;
-        margin-bottom: 0px;
-        display: flex;
-    }
+  .sale-first-line {
+      font-family: 'Anton';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 26px;
+      letter-spacing: 0.205em;
+      color: #fff;
+  }
 
-    /* Слайдер */
-    .title-cont span {
-        font-family: 'Roboto';
-        font-size: 14px;
-        cursor: pointer;
-    }
+  .sale-second-line {
+      font-family: 'Anton';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      letter-spacing: 0.205em;
+      color: #000;
+  }
 
-    /* Раздел скидки (только моб. вер.) */
-    .sale-orange-cont {
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #FFC165;
-        width: 100%;
-        height: 78px;
-    }
-    
-    .sale-first-line {
-        
-        font-family: 'Anton';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 26px;
-        letter-spacing: 0.205em;
-        color: #fff;
-    }
+  /* Промо раздел */
+  #left-third-cont{
+    display: none;
+  }
 
-    .sale-second-line {
-        font-family: 'Anton';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        letter-spacing: 0.205em;
-        color: #000;
-    }
-
-    /* Промо раздел */
-    #left-third-cont{
-        display: none;
-    }
-
-.promo-cont {
+  .promo-cont {
     display: flex;
     flex-direction: column;
     height: 365px;
@@ -124,57 +79,21 @@
   }
   
   .top-cont {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     height: 70%;
-    width: 100%;
-    /* background-color: #46b59b; */
-  }
-  
-  .bottom-cont {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 20%;
-    width: 100%;
   }
   
   .third-box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
     width: 50%;
   }
-
-  #mobile-oerder {
-    display: flex;
-  }
   
+  /* Кнопка details */
   .details-button {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     width: 95px;
     height: 36px;
     margin-left: 24%;
   }
   
   .details-button-span-cont {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     border-radius: 14px;
     height: 36px;
     width: 95px;
@@ -200,40 +119,20 @@
     color: #000;
   }
   
-  .main-image {
-    position: relative;
-    display: flex;
-    width: 110%;
-    height: 110%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-position-y: 45%;
-    transform: rotate(-30deg);
-  }
-  
+  /* Фото промо товара */
   .third-box-cont{
-    position: relative;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
     height: 100%;
   }
   
   .span-top {
-    display: flex;
-    position: relative;
     margin-top: 30%;
     margin-left: 10%;
     margin-right: 0;
   }
 
   .span-top span {
-    font-family: 'Anton';
     font-size: 36px;
-    color: #000;
     margin-bottom: 0;
     margin-right: 0;
     
@@ -252,25 +151,9 @@
   }
   
   /* Промо товары */
-  .rounded-cont{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 270px;
-    height: 100px;
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-  
   .rounded-item{
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     width: 71px;
     height: 71px;
-    background-color: transparent;
     border-radius: 100%;
     box-shadow: none;
   }
@@ -281,57 +164,26 @@
   }
   
   .photo-cont{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
     border-radius: 100%;
   }
   
   .photo{
-    position: absolute;
     width: 71px;
     height: 71px;
     margin-right: 23px;
     margin-bottom: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
     background-position: center;
-  }
-  
-  #ph1 {
-    background-image: url('../images/shoes/nike11.png');
-  }
-  
-  #ph2 {
-    background-image: url('../images/shoes/nike12.png');
-  }
-  
-  #ph3 {
-    background-image: url('../images/shoes/nike13.png');
-  }
-  
-  #ph4 {
-    background-image: url('../images/shoes/nike14.png');
   }
   
   .price{
     display: none;
   }
-  
-  .price p {
-    font-family: 'Roboto';
-    font-size: 20px;
-    color: #000;
-  }
 
   /* 3Д карусель */
   .object-cont {
-    display: flex;
-    flex-direction: column;
     height: 435px;
-    width: 100%;
     background: #65A8A8;
     transition: none;
   }
@@ -341,79 +193,80 @@
   }
 
   /* Ленты с надписями */
-.sale-string-cont {
-  height: 75px;
-}
+  .sale-string-cont {
+    height: 75px;
+  }
 
-.sale-string {
-  height: 27px;
-}
+  .sale-string {
+    height: 27px;
+  }
 
-#blue-string {
-  margin-bottom: -25px;
-}
+  #blue-string {
+    margin-bottom: -25px;
+  }
 
-#corral-string {
-  margin-bottom: 25px;
-}
+  #corral-string {
+    margin-bottom: 25px;
+  }
 
-#green-string {
-  margin-bottom: 25px;
-}
+  #green-string {
+    margin-bottom: 25px;
+  }
 
-/* Баскетбольная коллекция */
-.basketball-cont h2 {
-  font-size: 28px;
-}
-.basketball-image {
-  width: 612px;
-  height: 344px;
-}
+  /* Баскетбольная коллекция */
+  .basketball-cont h2 {
+    font-size: 28px;
+  }
 
-.basketball-image button:hover {
-  width: 147px;
-  height: 34px;
-  font-size: 18px;
-}
+  .basketball-image {
+    width: 612px;
+    height: 344px;
+  }
 
-/* Форма обратной связи */
-.form-container {
-  width: 100%;
-}
+  .basketball-image button:hover {
+    width: 147px;
+    height: 34px;
+    font-size: 18px;
+  }
 
-.form {
-  z-index: 3;
-  position: absolute;
-  width: 100%;
-  background-color: transparent;
-}
+  /* Форма обратной связи */
+  .form-container {
+    width: 100%;
+  }
 
-.form-title-cont {
-  width: 85%;
-  height: 40%;
-}
+  .form {
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+  }
 
-.form-title-cont span {
-  font-size: 28px;
-  line-height: 46px;
-}
+  .form-title-cont {
+    width: 85%;
+    height: 40%;
+  }
 
-.form-input-cont {
-  width: 85%;
-}
+  .form-title-cont span {
+    font-size: 28px;
+    line-height: 46px;
+  }
 
-.form-button {
-  width: 35%;
-  background: #92703D;
-  transition: none;
-}
+  .form-input-cont {
+    width: 85%;
+  }
 
-.form-button span {
-  font-size: 18px;
-}
+  .form-button {
+    width: 35%;
+    background: #92703D;
+    transition: none;
+  }
 
-.form-image-cont {
-  width: 100%;
-}
+  .form-button span {
+    font-size: 18px;
+  }
+
+  .form-image-cont {
+    width: 100%;
+  }
 
 }
