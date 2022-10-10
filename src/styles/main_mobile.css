@@ -370,6 +370,12 @@
   height: 344px;
 }
 
+.basketball-image button:hover {
+  width: 147px;
+  height: 34px;
+  font-size: 18px;
+}
+
 /* Форма обратной связи */
 .form-container {
   width: 100%;

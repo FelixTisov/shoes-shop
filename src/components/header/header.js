@@ -1,10 +1,94 @@
+import { useState } from 'react'
 import './header.css'
 import './header_mobile.css'
 
 function Header() {
+
+    const [isVisible, setVisibility] = useState('hidden')
+    const [openIsVisible, setOpenVisibility] = useState('visible')
+    const [closeIsVisible, setCloseVisibility] = useState('hidden')
+
+    // Обработчик нажатия кнокпи меню
+    const menuBtnHandler = () => {
+
+        let menu = document.querySelector('.menu-cont')
+
+        if(openIsVisible==='visible') {
+            setOpenVisibility('hidden')
+            setCloseVisibility('visible')
+        }
+        else {
+            setOpenVisibility('visible')
+            setCloseVisibility('hidden')
+        }
+
+        if(isVisible==='hidden') {
+            setVisibility('visible')
+            menu.animate([
+                {transform: 'translateY(-100vh)'},
+                {transform: `translateY(0vh)`}
+            ], {
+                duration: 300,
+                iterations: 1,
+            })
+        }
+        else {
+            menu.animate([   
+                {transform: `translateY(0vh)`},
+                {transform: 'translateY(-100vh)'}
+            ], {
+                duration: 300,
+                iterations: 1,
+            })
+            setTimeout(() => {
+                setVisibility('hidden')
+            }, 300) 
+        }
+
+    }
+    
     return(
         <header>
             <nav>
+
+                {/* Только для моб версии */}
+                <div className='menu-btn' onClick={menuBtnHandler}>
+                    <div className='open-btn' style={{visibility: openIsVisible}}>
+                        <div className='menu-line line-top'/>
+                        <div className='menu-line line-middle'/>
+                        <div className='menu-line line-bottom'/>
+                    </div>
+
+                    <div className='close-btn' style={{visibility: closeIsVisible}}>
+                        <div className='cross-line cross-left'/>
+                        <div className='cross-line cross-right'/>
+                    </div>
+                    
+                </div>
+
+                {/* Только для моб версии */}
+                <div className='menu-cont' style={{visibility: isVisible}}>
+                    <div className='menu-nav'>
+                        <a id='current-page'>Home</a>
+                        <a>Catalog</a>
+                        <a>Brands</a>
+                        <a>Sports</a>
+                    </div>
+
+                    <div className='menu-icons-cont'>
+                        <div className="nav-element">
+                            <div className="search-icon"></div>
+                        </div>
+                        <div className="nav-element">
+                            <div className="kart"></div>
+                        </div>
+                        <div className="nav-element">
+                            <div className="user"></div>
+                        </div>
+                    </div>
+
+                </div>
+
                 <div className="nav-items">
                     <div className="item">
                         <a href='#' id='current-page'>Home</a>
@@ -40,6 +124,7 @@ function Header() {
                                 
                 </div>
             </nav>
+
         </header>
     )
 }

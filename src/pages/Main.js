@@ -92,9 +92,10 @@ function Main() {
                     </div>
                 </div>
 
-                <video autoPlay="autoplay" id="vid" muted loop>
+                <video autoPlay={true} id="vid" muted loop>
                     <source src="/Videos/promo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
                 </video>
+                
             </div>
 
             {/* Слайдер товаров */}
