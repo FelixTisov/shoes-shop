@@ -92,7 +92,7 @@ function Main() {
                     </div>
                 </div>
 
-                <video autoPlay={true} id="vid" muted loop>
+                <video autoPlay={true} muted loop playsInline={true} id="vid">
                     <source src="/Videos/promo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
                 </video>
                 
