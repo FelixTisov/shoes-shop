@@ -35,7 +35,7 @@ window.onscroll = function () {
 
 }
 
-const saleString = 'SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25% FOR ALL COLLECTIONS  ●  SALES -25%'
+const saleString = 'SALES -25% FOR ALL COLLECTIONS    SALES -25% FOR ALL COLLECTIONS    SALES -25% FOR ALL COLLECTIONS    SALES -25% FOR ALL COLLECTIONS    SALES -25%'
 
 function Main() {
 
@@ -80,20 +80,20 @@ function Main() {
                     </div>
                     <div class="right">
                         <ul class="flip">
-                            <div class="swipe-item">
+                            <div class="swipe-item" id='you-swipe-item'>
                                 <p>YOU</p>
                             </div>
-                            <div class="swipe-item">
+                            <div class="swipe-item" id='prices-swipe-item'>
                                 <p>PRICES</p>
                             </div>
-                            <div class="swipe-item">
+                            <div class="swipe-item" id='brands-swipe-item'>
                                 <p>BRANDS</p>
-                            </div>     
+                            </div>                             
                         </ul>
                     </div>
                 </div>
 
-                <video autoPlay={true} muted loop playsInline={true} id="vid">
+                <video autoPlay={true} muted loop playsInline={true} poster='/Videos/poster.jpg' id="vid">
                     <source src="/Videos/promo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
                 </video>
                 
