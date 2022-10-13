@@ -191,7 +191,7 @@ function Main() {
                     <div className='third-box'>
                         <div className='third-box-cont'>
                             <div className='span-top'><span>{promoItem.title}</span></div>
-                            <div className='span-bottom'><span>750$</span></div>
+                            <div className='span-bottom'><span>{promoItem.price}</span></div>
                         </div>
                         <div className='third-box-cont' >
                             <div className='details-button'>
