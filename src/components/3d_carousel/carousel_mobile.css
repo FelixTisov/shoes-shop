@@ -1,5 +1,4 @@
 @media only screen and (max-width: 640px) {
-
     /* 3Д карусель */
     .object-cont-right {
         width: 100%;
@@ -53,31 +52,4 @@
         margin-top: 190%;
         margin-left: 15%;
     }
-
-    .order-button {
-        display: flex;
-        position: absolute;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 140px;
-        height: 36px;
-        margin-top: 90%;
-    }
-
-    .order-button .details-button-span-cont {
-        width: 100%;
-        height: 100%;
-    }
-
-    .order-button .details-button-span-cont p {
-        font-size: 22px;
-    }
-
-    .order-button .details-button-span-cont p:hover {
-        box-shadow: none;
-        border-radius: 5px;
-        color: #000;
-    }
-
 }

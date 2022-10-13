@@ -291,8 +291,11 @@ video {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 50%;
+  height: auto;
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
 }
 
 .details-button-span-cont p {
@@ -587,24 +590,6 @@ video {
   margin-bottom: 2%;
   width: 160px;
   height: 37px;
-}
-
-.basketball-image button {
-  cursor: pointer;
-  border: none;
-  width: 147px;
-  height: 34px;
-  background: #FFFFFF;
-  border-radius: 31px;
-
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  color: #444;
-  user-select: none;
 }
 
 .basketball-image button:hover {

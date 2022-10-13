@@ -5,6 +5,7 @@ import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
 import Slider from '../components/slider/slider'
 import Carousel from '../components/3d_carousel/carousel'
+import Button from '../components/button/Button'
 import '../styles/common.css'
 import '../styles/main.css'
 import '../styles/main_mobile.css'
@@ -194,9 +195,9 @@ function Main() {
                         </div>
                         <div className='third-box-cont' >
                             <div className='details-button'>
-                                <div className='details-button-span-cont'>
-                                    <p>Details</p>
-                                </div>
+                                <button className='details-button-span-cont'>
+                                        <p>Details</p>
+                                </button>
                             </div>
                         </div>       
                     </div>
@@ -276,8 +277,8 @@ function Main() {
                 <h2>Nike Basketball</h2>
                 <div className='basketball-image'>
                     <div className='basketball-image-button-cont'>
-                        <button>Explore now</button>
-                    </div>        
+                        <Button bgColor = '#fff'>Explore now</Button>
+                    </div>
                 </div>
             </div>
 

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Canvas} from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
+import Button from '../button/Button'
 import * as THREE from 'three'
 import './carousel.css'
 import './carousel_mobile.css'
@@ -185,11 +186,10 @@ function Carousel() {
             </div>
 
             {/* Только для мобильной версии */}
-            <div className='order-button'>
-                <div className='details-button-span-cont'>
-                    <p>ORDER NOW</p>
-                </div>
-            </div>
+            <Button 
+                bgColor = 'rgba(217, 217, 217, .35)' 
+                margin ='90%'
+            >ORDER NOW</Button>
         </div>
     )
 }
