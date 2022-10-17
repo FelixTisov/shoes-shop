@@ -63,7 +63,11 @@ function Carousel() {
         let paramsMiddle = [] // Координаты для средней точки
 
         // Для мобильной версии
-        if(window.matchMedia("(max-width: 640px)").matches) {
+        if(window.matchMedia('(max-device-width: 640px)', 
+                             '(min-device-width: 320px)', 
+                             '(-webkit-min-device-pixel-ratio: 2)'
+                            ).matches) 
+        {
             paramsTop = [184, 26]
             paramsMiddle = [9, 193]
         } // Для десктопной
@@ -106,7 +110,11 @@ function Carousel() {
         let paramsBottom = [] // Координаты для нижней точки
 
         // Для мобильной версии
-        if(window.matchMedia("(max-width: 640px)").matches) {
+        if(window.matchMedia('(max-device-width: 640px)', 
+                             '(min-device-width: 320px)', 
+                             '(-webkit-min-device-pixel-ratio: 2)'
+                            ).matches) 
+        {
             paramsMiddle = [0, -181]
             paramsBottom = [183, -26]
         } // Для десктопной
@@ -188,7 +196,7 @@ function Carousel() {
             {/* Только для мобильной версии */}
             <Button 
                 bgColor = 'rgba(217, 217, 217, .35)' 
-                margin ='90%'
+                margin ='320px'
             >ORDER NOW</Button>
         </div>
     )

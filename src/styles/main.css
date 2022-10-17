@@ -9,7 +9,7 @@
   justify-content: center;
   width: 100%;
   background-color: #FFF;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* Блок видео */
@@ -38,6 +38,7 @@ video {
   font-size: 5rem;
 	font-weight: 600;
 	color: #eee;
+
 }
 
 .left{

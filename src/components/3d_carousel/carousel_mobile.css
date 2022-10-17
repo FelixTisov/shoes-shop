@@ -1,4 +1,8 @@
-@media only screen and (max-width: 640px) {
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 640px)
+  and (-webkit-min-device-pixel-ratio: 2) 
+{
     /* 3Д карусель */
     .object-cont-right {
         width: 100%;
@@ -8,15 +12,14 @@
     .canvas-cont {
         height: 55%;
         width: 80%;
-        margin-top: -20%;
+        margin-top: -75px;
         margin-right: 20%;
-
     }
 
     .radius {
         width: 150px;
         height: 300px;
-        margin-top: -20%;
+        margin-top: -75px;
     }
 
     .box-dot {
