@@ -55,4 +55,8 @@
         margin-top: 190%;
         margin-left: 15%;
     }
+
+    #mobile-only{
+        display: flex;
+    }
 }

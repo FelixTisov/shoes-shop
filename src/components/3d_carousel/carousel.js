@@ -194,10 +194,17 @@ function Carousel() {
             </div>
 
             {/* Только для мобильной версии */}
+            
             <Button 
                 bgColor = 'rgba(217, 217, 217, .35)' 
                 margin ='320px'
-            >ORDER NOW</Button>
+                id='mobile-only'
+            >
+                ORDER NOW
+            </Button>
+            
+
+            
         </div>
     )
 }
