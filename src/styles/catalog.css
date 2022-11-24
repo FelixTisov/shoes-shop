@@ -1,0 +1,72 @@
+.fast-filter {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 482px;
+    width: 100%;
+    margin-top: 7vh;
+}
+
+.fast-cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    width: 1120px;
+    height: 286px;
+}
+
+.fast-filter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 314px;
+    height: 286px;
+    margin-left: 28px;
+    margin-right: 28px;
+}
+
+.fast-filter-item_image {
+    display: flex;
+    width: 100%;
+    height: 230px;
+    border-radius: 15px;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#fast-men {
+    background-image: url('../images/filters/men.webp');
+}
+
+#fast-women {
+    background-image: url('../images/filters/women.webp');
+}
+
+#fast-children {
+    background-image: url('../images/filters/children.jpeg');
+}
+
+.fast-filter-item_title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 47%;
+    height: 56px;
+    border-bottom: 3px solid black;
+}
+
+.fast-filter-item_title p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.25em;
+    color: #000;
+    cursor: pointer;
+}

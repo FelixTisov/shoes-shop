@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import {useNavigate, Link} from "react-router-dom"
 import './header.css'
 import './header_mobile.css'
 
@@ -7,6 +8,8 @@ function Header() {
     const [isVisible, setVisibility] = useState('hidden')
     const [openIsVisible, setOpenVisibility] = useState('visible')
     const [closeIsVisible, setCloseVisibility] = useState('hidden')
+
+    const navigate = useNavigate()
 
     // Обработчик нажатия кнокпи меню
     const menuBtnHandler = () => {
@@ -91,16 +94,16 @@ function Header() {
 
                 <div className="nav-items">
                     <div className="item">
-                        <a href='#' id='current-page'>Home</a>
+                        <p onClick={()=>{navigate('/')}} id='current-page'>Home</p>
                     </div>
                     <div className="item">
-                        <a href='#'>Catalog</a>
+                        <p onClick={()=>{navigate('/catalog')}}>Catalog</p>
                     </div>
                     <div className="item">
-                        <a href='#'>Brands</a>
+                        <p>Brands</p>
                     </div>
                     <div className="item">
-                        <a href='#'>Sports</a>
+                        <p>Sports</p>
                     </div>
                 </div>
 
