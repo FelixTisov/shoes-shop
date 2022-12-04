@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {FaChevronLeft, FaChevronRight} from 'react-icons/fa'
-import './slider.css'
-import './slider_mobile.css'
+import './slider.scss'
+import './slider_mobile.scss'
 
 const offsetIndex = 1
 

@@ -1,18 +1,15 @@
+@import '../../assets/variables.scss';
+
 .main-cont {
-  display: flex;
+  @extend %cont-shared;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
   width: 99vw;
   height: 53vh;
 }
 
 .carousel {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   width: 100%;
   height: 85%; 
 }
@@ -24,9 +21,7 @@
 }
 
 .all-items-cont {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @extend %cont-shared;
   justify-content: flex-start;
   width: inherit;
   height: inherit;
@@ -39,10 +34,8 @@
 
 /* Стрелки */
 .arrow-cont {
-  display: flex;
+  @extend %cont-shared;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 8%;
   height: 100%;
 }
@@ -56,20 +49,15 @@
 
 /* Указатели слайдов */
 .circles-cont {
-  position: relative;
-  display: flex;
+  @extend %cont-shared;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
   width: 100%;
   height: 15%;
 }
 
 .circles {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   width: 15%;
   height: 80%;
   margin-bottom: 2%;

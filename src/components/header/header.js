@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import {useNavigate, Link} from "react-router-dom"
-import './header.css'
-import './header_mobile.css'
+import { useNavigate } from "react-router-dom"
+import './header.scss'
+import './header_mobile.scss'
 
 function Header() {
 

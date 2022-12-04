@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import '../../assets/variables.scss';
 
 /* Шапка */
-header{
+header {
     top: 0;   
     position: fixed;
     z-index: 5;
@@ -15,7 +16,7 @@ header{
     display: none;
 }
 
-nav{
+nav {
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -24,103 +25,88 @@ nav{
 }
 
 /* Кнопки навигации */
-.nav-items{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.nav-items {
+    @extend %cont-shared;
     justify-content: flex-start;
     width: 50%;
     height: 100%;  
 }
 
-.item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.item {
+    @extend %cont-shared;
     height: 100%;
     width: 9%;
     padding-right: 8%;
     padding-left: 8%;
-}
+    
+    p {
+        font-family: 'Roboto';
+        font-size: 17px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #444;
+        user-select: none;
 
-.item p{
-    font-family: 'Roboto';
-    font-size: 17px;
-    cursor: pointer;
-    text-decoration: none;
-    color: #444;
-    user-select: none;
-}
-
-.item p:hover{
-    font-family: 'Roboto';
-    font-size: 19px;
-    cursor: pointer;
+        &:hover{
+            font-family: 'Roboto';
+            font-size: 19px;
+            cursor: pointer;
+        }
+    }
 }
 
 /* Строка поиска */
-.nav-btns{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
+.nav-btns {
     position: absolute;
+    @extend %cont-shared;
+    justify-content: flex-end;
     width: 30%;
     height: 100%;
     right: 0;
 }
 
-.search-cont{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+.search-cont {
+    @extend %cont-shared;
     height: 60%;
     right: 0;
 }
 
 .search-field {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @extend %cont-shared;
     justify-content: flex-start;
     width: 110px;
     height: 32px;
     background-color: rgba(204, 201, 201, 0.6);
     border-radius: 40px;
+
+    &:hover {
+        background-color: #b89cff;
+    }
 }
 
-.search-field:hover {
-    background-color: #b89cff;
-}
-
-.search-input{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.search-input {
+    @extend %cont-shared;
     height: 100%;
     width: 70%;
+
+    input {
+        margin-left: 10px;
+        width: 80%;
+        background-color: transparent;
+        border: 0;
+        font-size: 14px;
+        user-select: none;
+
+        &:focus {
+            outline: none;
+            font-size: 14px;
+            text-align: left;
+            color: #000;
+        }
+    }
 }
 
-.search-input input{
-    margin-left: 10px;
-    width: 80%;
-    background-color: transparent;
-    border: 0;
-    font-size: 14px;
-    user-select: none;
-}
-
-.search-input input:focus {
-    outline: none;
-    font-size: 14px;
-    text-align: left;
-    color: #000;
-}
-
-.search-icon{
+.search-icon {
     height: 50%;
     width: 20%;
     background-image: url('../../images/icons/search.png');
@@ -129,12 +115,8 @@ nav{
 }
 
 /* Кнопки профиля */
-.nav-cont{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.nav-cont {
+    @extend %cont-shared;
     height: 70%;
     right: 0;
     width: 100px;
@@ -142,24 +124,21 @@ nav{
     margin-left: 3%;
 }
 
-.nav-element{
-    position: relative;
+.nav-element {
+    @extend %cont-shared;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 100%;
     width: 36px;
     height: 36px;
     margin-right: 6px;
     margin-left: 6px;
+
+    &:hover {
+        background-color: #b89cff;
+    }
 }
 
-.nav-element:hover{
-    background-color: #b89cff;
-}
-
-.kart{
+.kart {
     position: absolute;
     height: 26px;
     width: 26px;
@@ -168,7 +147,7 @@ nav{
     background-size: contain;
 }
 
-.user{
+.user {
     position: absolute;
     height: 20px;
     width: 20px;
@@ -177,7 +156,7 @@ nav{
     background-size: contain;
 }
 
-#current-page{
+#current-page {
     color: #000;
     font-weight: bold;
 }

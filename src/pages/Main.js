@@ -6,9 +6,9 @@ import Footer from '../components/footer/footer'
 import Slider from '../components/slider/slider'
 import Carousel from '../components/3d_carousel/carousel'
 import Button from '../components/button/Button'
-import '../styles/common.css'
-import '../styles/main.css'
-import '../styles/main_mobile.css'
+import '../styles/common.scss'
+import '../styles/main.scss'
+import '../styles/main_mobile.scss'
 
 /* Сдвиг бг при прокрутке */ 
 window.onscroll = function () {

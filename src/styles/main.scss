@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import '../assets/variables.scss';
 
 /* Блок видео */
 .video-cont {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   width: 100%;
   height: 47vh;
 }
@@ -20,21 +19,23 @@ video {
   left: 0;
 }
 
+/* Карусель слоганов */ 
 .wordCarousel {
 	position: absolute;
-	display: flex;
-	flex-direction: row;
+	@extend %cont-shared;
 	font-family: 'Roboto';
   font-size: 5rem;
 	font-weight: 600;
-	color: #eee;
+	color: #EEE;
 
+  p{
+    mix-blend-mode:color-dodge;
+    color: lightsalmon;
+  }
 }
 
 .left{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	@extend %cont-shared;
 	width: 40%;
 	height: 92px;
 }
@@ -48,21 +49,16 @@ video {
 	height: 92px;
 }
 
-.wordCarousel p{
-	mix-blend-mode:color-dodge;
-	color: lightsalmon;
-}
-
 .swipe-item{
+  display: flex;
 	text-align: left;
-	 margin-left: -10%;
-	 height: 90px;
-	 margin-bottom: 0px;
-	 display: flex;
-}
+  margin-left: -10%;
+  height: 90px;
+  margin-bottom: 0px;
 
-.swipe-item p{
-	margin-top: -1.2%;
+  p{
+    margin-top: -1.2%;
+  }
 }
 
 .flip {
@@ -96,11 +92,9 @@ video {
 		}
 }
 
+/* Слайдер товаров */
 .slider-cont {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   width: 100%;
   height: 100%;
   min-width: 100%;
@@ -108,11 +102,8 @@ video {
 }
 
 .slider-box {
-  position: relative;
-  display: flex;
+  @extend %cont-shared;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin-left: 5%;
   margin-right: 5%;
   width: 30%;
@@ -120,8 +111,7 @@ video {
 }
 
 .image-box {
-  position: relative;
-  display: flex;
+  @extend %cont-shared;
   width: 120%;
   height: 70%;
   background-repeat: no-repeat;
@@ -131,21 +121,20 @@ video {
 }
 
 .title-cont {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend %cont-shared;
   justify-content: flex-start;
+  flex-direction: column;
   width: 100%;
   height: 10%;
+
+  span {
+    font-family: 'Roboto';
+    font-size: 18px;
+    cursor: pointer;
+  }
 }
 
-.title-cont span {
-  font-family: 'Roboto';
-  font-size: 18px;
-  cursor: pointer;
-}
-
+/* Картинки товаров в слайдере */ 
 #box1{
   background-image: url('../images/slider/nike1.png');
 }
@@ -194,7 +183,7 @@ video {
   height: 100vh;
   width: 100%;
   background: 
-  linear-gradient(90deg,#FFC165 75%,#fff 0) 
+  linear-gradient(90deg,#FFC165 75%,#FFF 0) 
   var(--_p,100%)/200% no-repeat;
   transition: .8s;
 }
@@ -204,40 +193,26 @@ video {
 }
 
 .top-cont {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   height: 80%;
   width: 100%;
 }
 
 .bottom-cont {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   height: 20%;
   width: 100%;
 }
 
 .third-box {
-  position: relative;
-  display: flex;
+  @extend %cont-shared;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100%;
   width: 33.33%;
 }
 
 .brand-name-cont {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   width: 70%;
   margin-bottom: -5%;
 }
@@ -250,12 +225,13 @@ video {
   color: #fcedd8;
   font-family: 'Nerko One';
   font-weight: 700;
-  text-shadow: 5px 5px 0px #eb452b, 
-              10px 10px 0px #efa032, 
-              15px 15px 0px #46b59b, 
-              20px 20px 0px #017e7f, 
-              25px 25px 0px #052939, 
-              30px 30px 0px #c11a2b;
+  text-shadow: 
+    5px 5px 0px #eb452b, 
+    10px 10px 0px #efa032, 
+    15px 15px 0px #46b59b, 
+    20px 20px 0px #017e7f, 
+    25px 25px 0px #052939, 
+    30px 30px 0px #c11a2b;
 }
 
 .brand-title-cont p {
@@ -266,46 +242,38 @@ video {
 
 /* Кнопка details */
 .details-button {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   width: 25%;
   height: 50px;
   margin-left: 19%;
 }
 
 .details-button-span-cont {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   height: auto;
   width: fit-content;
   border: none;
   background-color: transparent;
   border-radius: 5px;
-}
 
-.details-button-span-cont p {
-  font-family: 'Roboto';
-  font-size: 28px;
-  color: #000;
-  cursor: pointer;
-  user-select: none;
-  box-shadow: inset 0 0 0 0 #000;
-  border-radius: 5px;
-  margin: 0 -.25rem;
-  padding: 0 .25rem;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
+  p {
+    font-family: 'Roboto';
+    font-size: 28px;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: inset 0 0 0 0 #000;
+    border-radius: 5px;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 
-.details-button-span-cont p:hover {
-  box-shadow: inset 0 100px 0 0 #000;
-  border-radius: 5px;
-  color: #fff;
+    &:hover {
+      box-shadow: inset 0 100px 0 0 #000;
+      border-radius: 5px;
+      color: #FFF;
+    }
+  }
 }
 
 /* Фото промо товара */
@@ -322,26 +290,21 @@ video {
 }
 
 .third-box-cont{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   width: 100%;
   height: 50%;
 }
 
 .span-top {
-  display: flex;
-  position: relative;
+  @extend %cont-shared;
   margin-right: -20%;
-  
-}
 
-.span-top span {
-  font-family: 'Anton';
-  font-size: 64px;
-  color: #000;
-  margin-bottom: -55%;
+  span {
+    font-family: 'Anton';
+    font-size: 64px;
+    color: #000;
+    margin-bottom: -55%;
+  }
 }
 
 .span-bottom {
@@ -360,11 +323,9 @@ video {
 }
 
 .rounded-item{
-  font-size: 18px;
-  cursor: pointer;
   display: flex;
-  flex-direction: row;
   align-items: center;
+  flex-direction: row;
   width: 224px;
   height: 81px;
   margin-left: 5%;
@@ -372,6 +333,8 @@ video {
   background-color: transparent;
   border-radius: 31px;
   box-shadow: 9px 9px 24px 1px rgba(0, 0, 0, .25  );
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .rounded-item-active{
@@ -387,14 +350,15 @@ video {
 }
 
 .photo{
-  margin-left: 6%;
   position: absolute;
+  margin-left: 6%;
   width: 124px;
   height: 68px;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
+/* Картинки товаров в промо разделе */ 
 #ph1 {
   background-image: url('../images/shoes/nike11.png');
 }
@@ -414,12 +378,12 @@ video {
 .price{
   margin-left: 30%;
   width: 40%;
-}
 
-.price p {
-  font-family: 'Roboto';
-  font-size: 20px;
-  color: #000;
+  p {
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: #000;
+  }
 }
 
 /* 3Д карусель */
@@ -439,60 +403,50 @@ video {
 }
 
 .object-cont-left {
-  display: flex;
+  @extend %cont-shared;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100%;
   width: 30%;
 }
 
 .button-cont {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   width: 60%;
-}
 
-.button-cont span {
-  width: 58%;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  letter-spacing: 0.04em;
-  color: #000000;
-  user-select: none;
+  span {
+    width: 58%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    color: #000;
+    user-select: none;
+  }
 }
 
 .button-circle {
+  @extend %cont-shared;
   margin-left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 32px;  
   height: 32px;
   border: 1px solid #000;
   border-radius: 100% 100% 100% 100%;
   cursor: pointer;
-}
 
-.button-circle:hover {
-  background-color: #000;
-}
+  &:hover {
+    background-color: #000;
+  }
 
-.button-circle:hover #circledButton {
-  color: #fff;
+  &:hover #circledButton {
+    color: #FFF;
+  }
 }
 
 /* Ленты с надписями */
 .sale-string-cont {
-  position: relative;
-  display: flex;
+  @extend %cont-shared;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 150px;
   margin-top: -30px;
@@ -500,24 +454,21 @@ video {
 
 .sale-string {
   position: absolute;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   height: 55px;
   width: 100%;
   overflow: hidden;
-}
 
-.sale-string p {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  color: #000000;
-  user-select: none;
+  p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #000;
+    user-select: none;
+  }
 }
 
 #blue-string {
@@ -540,153 +491,130 @@ video {
 
 /* Баскетбольная коллекция */
 .basketball-cont {
-  margin-top: 3%;
-  position: relative;
-  display: flex;
+  @extend %cont-shared;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 3%;
   width: 100%;
-}
 
-.basketball-cont h2 {
-  font-family: 'Anton';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 60px;
-  text-align: center;
-  letter-spacing: 0.105em;
-  color: #000;
+  h2 {
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.105em;
+    color: #000;
+  }
 }
 
 .basketball-image {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend %cont-shared;
   justify-content: flex-end;
+  flex-direction: column;
   margin-top: 2%;
   width: 1224px;
   height: 688px;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url('../images/shoes/basketball.jpg');
+
+  button:hover {
+    width: 160px;
+    height: 37px;
+    font-size: 21px;
+  }
 }
 
 .basketball-image-button-cont {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   margin-bottom: 2%;
   width: 160px;
   height: 37px;
 }
 
-.basketball-image button:hover {
-  width: 160px;
-  height: 37px;
-  font-size: 21px;
-}
-
 /* Форма обратной связи */
 .form-container {
+  @extend %cont-shared;
   margin-top: 7%;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   width: 80.5%;
   max-width: 1224px;
   height: 295px;
 }
 
 .form {
-  position: relative;
-  display: flex;
+  @extend %cont-shared;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 59.9%;
   height: 100%;
   background-color: #EAC794;
 }
 
 .form-title-cont {
-  display: flex;
   position: relative;
-  margin-top: 0;
-  flex-direction: column;
+  display: flex;
   align-items: left;
   justify-content: center;
+  flex-direction: column;
+  margin-top: 0;  
   width: 75%;
   height: 60%;
-}
 
-.form-title-cont span {
-  font-family: 'Anton';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 54px;
-  letter-spacing: 0.105em;
-  color: #FFF;
+  span {
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.105em;
+    color: #FFF;
+  }
 }
 
 .form-input-cont {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   width: 75%;
   height: 18%;
   background-color: #FFF;
 }
 
 .input-cont {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   width: 70%;
   height: 100%;
-}
 
-.input-cont input {
-  width: 96%;
-  height: 75%;
-  border: none;
-  font-size: 16px;
-}
+  input {
+    width: 96%;
+    height: 75%;
+    border: none;
+    font-size: 16px;
 
-.input-cont input::placeholder {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 23px;
-  text-align: left;
-  color: #888;
-  user-select: none;
-}
+    &::placeholder {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 23px;
+      text-align: left;
+      color: #888;
+      user-select: none;
+    }
 
-.input-cont input:focus {
-  outline: none;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 23px;
-  text-align: left;
-  color: #000;
+    &:focus {
+      outline: none;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 23px;
+      text-align: left;
+      color: #000;
+    }
+  }
 }
 
 .form-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %cont-shared;
   border: none;
   width: 30%;
   height: 100%;
@@ -695,22 +623,22 @@ video {
     linear-gradient(90deg,#3D9282 50%,#92703D 0) 
     var(--_p,100%)/200% no-repeat;
   transition: .4s;
-}
 
-.form-button:hover{
-  --_p: 0%;
-}
+  &:hover{
+    --_p: 0%;
+  }
 
-.form-button span {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  letter-spacing: 0.07em;
-  color: #FFF;
-  user-select: none;
+  span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.07em;
+    color: #fff;
+    user-select: none;
+  }
 }
 
 .form-image-cont {
@@ -722,8 +650,3 @@ video {
   width: 45%;
   background-image: url('../images/shoes/run.jpeg');
 }
-
-
-
-
-
