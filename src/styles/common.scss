@@ -2,8 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* Основные блоки */
-html,body {
+body {
     margin: 0;
+    
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        border-radius: 10px;
+        // background-color: red;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgb(192, 192, 192);
+    }
 }
 
 .wrapper {
@@ -13,7 +31,7 @@ html,body {
     justify-content: center;
     width: 100%;
     background-color: #FFF;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 

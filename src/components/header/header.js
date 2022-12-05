@@ -118,7 +118,7 @@ function Header() {
 
                     <div className='nav-cont'>
                         <div className="nav-element">
-                            <div className="kart"></div>
+                            <div className="kart" onClick={()=>{navigate('/cart')}}></div>
                         </div>
                         <div className="nav-element">
                             <div className="user"></div>

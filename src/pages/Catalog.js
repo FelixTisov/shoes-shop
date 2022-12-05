@@ -11,10 +11,6 @@ function Catalog () {
     const [currentSort, setCurrentSort] = useState('By popular')
 
     const catalogGoods =  require('../assets/catalogGoods')
-    console.log(catalogGoods)
-
-    let gridLength = 4;
-    let gridHeight = 4;
 
     return (
         <div className='wrapper'>
@@ -155,6 +151,8 @@ function Catalog () {
                                                         image={element.image} 
                                                         title={element.title}
                                                         price={element.price}
+                                                        id={element.id}
+                                                        productItem={element}
                                                     />
                                                 ))
                                             }

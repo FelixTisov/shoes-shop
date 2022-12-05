@@ -1,0 +1,50 @@
+@import '../assets/variables.scss';
+
+.mid-column {
+    @extend %cont-shared;
+    align-items: flex-start;
+    width: 81%;
+    height: fit-content;
+    margin-top: 154px;
+}
+
+.items-list-cont {
+    @extend %cont-shared;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90%;
+    height: 274px;
+}
+
+.items-list_title {
+    @extend %cont-shared;
+    justify-content: flex-start;
+    width: 100%;
+    height: 24px;
+
+    p {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        color: #000;
+    }
+}
+
+.items-list {
+    @extend %cont-shared;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 26px;
+}
+
+.submit-form {
+    @extend %cont-shared;
+    width: 230px;
+    height: 274px;
+    background-color: #F4F4F4;
+    border-radius: 30px;
+}
