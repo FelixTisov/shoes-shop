@@ -7,12 +7,9 @@
     height: 66px;
 
     p {
-        font-family: 'Roboto';
-        font-style: normal;
+        @extend %p-shared;
         font-weight: 300;
         font-size: 20px;
-        text-align: center;
-        color: #000;
     }
 }
 
@@ -25,8 +22,9 @@
 .item-image-cont {
     @extend %cont-shared;
     justify-content: flex-start;
-    width: 45%;
+    width: 100px;
     height: 100%;
+    // background-color: yellow
 }
 
 .cart-item-image {
@@ -38,11 +36,26 @@
     background-size: contain
 }
 
+.cart-item-title {
+    @extend %cont-shared;
+    justify-content: flex-start;
+    // background-color: pink;
+    padding-left: 16px;
+    width: 20%;
+    height: 100%;
+    p {
+        @extend %p-shared;
+        font-weight: lighter;
+        font-size: 20px;
+    }
+}
+
 .item-price {
     @extend %cont-shared;
     justify-content: flex-end;
     width: 45%;
     height: 100%;
+    // background-color: green;
 }
 
 .delete-button-cont {
@@ -59,11 +72,8 @@
 
 .total-price {
     p {
-        font-family: 'Roboto';
-        font-style: normal;
+        @extend %p-shared;
         font-weight: 400;
         font-size: 26px;
-        text-align: center;
-        color: #000;
     }
 }

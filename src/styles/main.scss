@@ -1,96 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 @import '../assets/variables.scss';
-
-/* Блок видео */
-.video-cont {
-  @extend %cont-shared;
-  width: 100%;
-  height: 47vh;
-}
-
-video {
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-/* Карусель слоганов */ 
-.wordCarousel {
-	position: absolute;
-	@extend %cont-shared;
-	font-family: 'Roboto';
-  font-size: 5rem;
-	font-weight: 600;
-	color: #EEE;
-
-  p{
-    mix-blend-mode:color-dodge;
-    color: lightsalmon;
-  }
-}
-
-.left{
-	@extend %cont-shared;
-	width: 40%;
-	height: 92px;
-}
-
-.right {
-	display: flex;
-	flex-direction: column;
-	width: 60%;
-	overflow: hidden;
-	position: relative;
-	height: 92px;
-}
-
-.swipe-item{
-  display: flex;
-	text-align: left;
-  margin-left: -10%;
-  height: 90px;
-  margin-bottom: 0px;
-
-  p{
-    margin-top: -1.2%;
-  }
-}
-
-.flip {
-	animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
-}
-
-@keyframes flip3 {
-	0% {
-		margin-top: -200px;
-		}
-	5% {
-		margin-top: -180px;
-		}
-	33% {
-		margin-top: -180px;
-		}
-	38% {
-		margin-top: -90px;
-		}
-	66% {
-		margin-top: -90px;
-		}
-	71% {
-		margin-top: 0px;
-		}
-	99.99% {
-		margin-top: 0px;
-		}
-	100% {
-		margin-top: -270px;
-		}
-}
 
 /* Слайдер товаров */
 .slider-cont {
@@ -649,4 +560,115 @@ video {
   height: 100%;
   width: 45%;
   background-image: url('../images/shoes/run.jpeg');
+}
+
+.cookies-warning {
+  position: fixed;
+  bottom: 5px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  height: 180px;
+  border-radius: 15px;
+  background-color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 6px -4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cookies-header {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  // background-color: yellow;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.cookies-image {
+  width: 40px;
+  height: 40px;
+  background-image: url('../assets/cookie.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cookies-title {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+
+  p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    color: #000;
+    user-select: none;
+  }
+}
+
+.cookies-body {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  // background-color: blue;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cookies-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  height: 30%;
+  // background-color: green;
+}
+
+.cookie-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 35px;
+  background-color: #5476cd;
+  border-radius: 15px;
+  margin-left: 20px;
+  cursor: pointer;
+
+  p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    user-select: none;
+  }
+}
+
+.manage {
+  margin-left: 0;
+  background-color: #cfd9f2;
+
+  p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(75, 75, 75);
+    user-select: none;
+  }
 }

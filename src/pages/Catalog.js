@@ -129,16 +129,6 @@ function Catalog () {
                     </div>
 
                     <div className='catalog-body-cont'>
-
-                        {/* {
-                            catalogGoods.map((item, index) => {
-                                return (
-                                    <CatalogItem/>
-                                )                 
-                            })
-                        } */}
-
-
                         <div className='catalog-body'>
 
                             {

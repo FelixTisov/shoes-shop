@@ -74,7 +74,7 @@
 
 .product-main-cont {
     @extend %cont-shared;
-    height: 490px;
+    height: 470px;
     width: 81%;
     // border: 1px solid black;
 }
@@ -152,7 +152,10 @@
     justify-content: flex-end;
 }
 
-.rounded-cont {
+.rounded-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 134px;
     height: 100%;
     border-radius: 30px;
@@ -204,5 +207,134 @@
         letter-spacing: 0.085em;
         color: #000;
         margin-right: 32px;
+    }
+}
+
+.information-cont {
+    display: flex;
+    width: 81%;
+    height: auto;
+}
+
+.information-cont_half {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    // border: 1px solid black;
+}
+
+.swith-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 70px;
+    // border: 1px solid black;
+}
+
+.info-button {
+    display: block;
+    width: 142px;
+    height: 52px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    p {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0.18em;
+        color: #000;
+    }
+}
+
+.info-button_active {
+    border-bottom: 1px solid #000;
+}
+
+.info-button_right {
+   margin-left: 50px; 
+}
+
+.main-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70px;
+    width: 100%;
+    margin-top: 30px;
+
+    p {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        letter-spacing: 0.12em;
+        color: #000;
+    }
+}
+
+.info-columns-cont {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.info-column {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.info-column_item {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 48px;
+    align-items: center;
+    justify-content: flex-start;
+
+    p {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #444;
+    }
+}
+
+.info-brand {
+    p {
+        text-align: justify;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #444;    
+    }
+}
+
+.learn-more-bitton {
+    display: flex;
+    width: fit-content;
+    height: 50px;
+    border-bottom: 1px solid #65A8A8; 
+    cursor: pointer;
+
+    p {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        color: #65A8A8;
     }
 }

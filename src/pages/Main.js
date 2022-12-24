@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
+import React from 'react'
 import { FaChevronRight } from 'react-icons/fa'
 import { promoObjects } from '../components/promo_objects'
 import Header from '../components/header/header'
@@ -9,6 +10,10 @@ import Button from '../components/button/Button'
 import '../styles/common.scss'
 import '../styles/main.scss'
 import '../styles/main_mobile.scss'
+
+import $ from 'jquery'
+
+const Banner = React.lazy(() => import('../components/banner/banner'))
 
 /* Сдвиг бг при прокрутке */ 
 window.onscroll = function () {
@@ -67,37 +72,45 @@ function Main() {
         setPromoItem(promoObjects[number])
     } 
 
+    const hideCookies = () => {
+        $('.cookies-warning').hide()
+    }
+
     return(
         <div className='wrapper'>
+
+            <div className='cookies-warning'>
+                <div className='cookies-header'>
+                    <div className='cookies-image'/>
+                    <div className='cookies-title'>
+                        <p>We use cookies</p>
+                    </div>
+                </div>
+                <div className='cookies-body'>
+                    <p>
+                        We use cookies to help the website function and improve your user
+                        experience. You may unable/disable cookies via 'Manage cookies'
+                    </p>
+                </div>
+                <div className='cookies-actions'>
+                    <div className='cookie-button manage'>
+                        <p>Manage cookies</p>
+                    </div>
+                    <div className='cookie-button accept' onClick={hideCookies}>
+                        <p>Accept all</p>
+                    </div>
+                    <div className='cookie-button reject' onClick={hideCookies}>
+                        <p>Reject all</p>
+                    </div>
+                </div>
+            </div>
 
             <Header/>
 
             {/* Блок с видео */}
-            <div class="video-cont" >
-                <div class="wordCarousel">
-                    <div class="left">
-                        <p>BEST</p>
-                    </div>
-                    <div class="right">
-                        <ul class="flip">
-                            <div class="swipe-item" id='you-swipe-item'>
-                                <p>YOU</p>
-                            </div>
-                            <div class="swipe-item" id='prices-swipe-item'>
-                                <p>PRICES</p>
-                            </div>
-                            <div class="swipe-item" id='brands-swipe-item'>
-                                <p>BRANDS</p>
-                            </div>                             
-                        </ul>
-                    </div>
-                </div>
-
-                <video autoPlay={true} muted loop playsInline={true} poster='/Videos/poster.jpg' id="vid">
-                    <source src="/Videos/promo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
-                </video>
-                
-            </div>
+            <Suspense>
+                <Banner/>
+            </Suspense>
 
             {/* Слайдер товаров */}
             <Slider>
@@ -289,20 +302,19 @@ function Main() {
                         <span>Subscribe to our</span>
                         <span>news and sales</span>
                     </div>
-                    <div className='form-input-cont'>
+                    <form className='form-input-cont'>
                         <div className='input-cont'>
                             <input placeholder='Enter your email here' type="email"/>
                         </div>
                         <button type='submit' className='form-button'>
                             <span>Subscribe!</span>
                         </button>
-                    </div>
+                    </form>
                 </form>
                 <div className='form-image-cont'/>
             </div>
 
             <Footer/>
-
         </div>
     )
 }

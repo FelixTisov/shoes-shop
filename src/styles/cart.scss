@@ -23,12 +23,9 @@
     height: 24px;
 
     p {
-        font-family: 'Roboto';
-        font-style: normal;
+        @extend %p-shared;
         font-weight: 400;
         font-size: 20px;
-        text-align: center;
-        color: #000;
     }
 }
 
@@ -43,8 +40,59 @@
 
 .submit-form {
     @extend %cont-shared;
+    flex-direction: column;
     width: 230px;
     height: 274px;
     background-color: #F4F4F4;
     border-radius: 30px;
+}
+
+.cart-title {
+    @extend %cont-shared;
+    justify-content: flex-start;
+    width: 80%;
+    height: 50px;
+    // background-color: red;
+
+    p {
+        @extend %p-shared;
+        font-weight: 400;
+        font-size: 22px;
+    }
+}
+
+.count {
+    height: 26px;
+
+    p {
+        @extend %p-shared;
+        font-weight: 300;
+        font-size: 18px;
+    }
+}
+
+.promo-button {
+    border-bottom: 1px solid #C9C9C9;
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        color: #FFC165;
+        cursor: pointer;
+    }
+}
+
+.submit-button {
+    @extend %cont-shared; 
+    width: 80%;
+    height: 41px;
+    border-radius: 30px;
+    background-color: #FFC165;
+    cursor: pointer;
+
+    p {
+        @extend %p-shared;
+        font-weight: 300;
+        font-size: 18px;
+        color: #fff;
+    }
 }

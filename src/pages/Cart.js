@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import { FaStar, FaChevronDown } from 'react-icons/fa'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
 import CartItem from '../components/cart_item/CartItem'
@@ -9,13 +7,14 @@ import '../styles/cart.scss'
 
 function Cart () {
 
-  const catalogGoods =  require('../assets/catalogGoods')
-
   const itemsInCart  = useSelector(state => state.selection.itemsInCart)
 
+  let totalCount = 0
   let totalPrice = 0
+
   itemsInCart.forEach(element => {
     totalPrice += Number(element.price)
+    totalCount ++
   })
 
   console.log(itemsInCart)
@@ -38,6 +37,7 @@ function Cart () {
                                     title={item.title}
                                     image={item.image}
                                     price={item.price}
+                                    index={index}
                                 /> 
                             )                 
                         })
@@ -46,8 +46,20 @@ function Cart () {
                 </div>
             </div>
             <div className='submit-form'>
+                <div className='cart-title'>
+                    <p>In cart:</p>
+                </div>
+                <div className='cart-title count'>
+                    <p>{totalCount}</p>
+                </div>
+                <div className='cart-title promo-button'>
+                    <p>Enter promocode</p>
+                </div>
                 <div className='total-price'>
                     <p>{totalPrice}$</p>
+                </div>
+                <div className='submit-button'>
+                    <p>Submit</p>
                 </div>
             </div>
         </div>

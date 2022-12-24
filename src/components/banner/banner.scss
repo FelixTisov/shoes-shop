@@ -1,0 +1,90 @@
+@import '../../assets/variables.scss';
+
+/* Блок видео */
+.video-cont {
+    @extend %cont-shared;
+    width: 100%;
+    height: 47vh;
+  }
+  
+  video {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Карусель слоганов */ 
+  .wordCarousel {
+      position: absolute;
+      @extend %cont-shared;
+      font-family: 'Roboto';
+    font-size: 5rem;
+      font-weight: 600;
+      color: #EEE;
+  
+    p{
+      mix-blend-mode:color-dodge;
+      color: lightsalmon;
+    }
+  }
+  
+  .left{
+      @extend %cont-shared;
+      width: 40%;
+      height: 92px;
+  }
+  
+  .right {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      overflow: hidden;
+      position: relative;
+      height: 92px;
+  }
+  
+  .swipe-item{
+    display: flex;
+      text-align: left;
+    margin-left: -10%;
+    height: 90px;
+    margin-bottom: 0px;
+  
+    p{
+      margin-top: -1.2%;
+    }
+  }
+  
+  .flip {
+      animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+  }
+  
+  @keyframes flip3 {
+      0% {
+          margin-top: -200px;
+          }
+      5% {
+          margin-top: -180px;
+          }
+      33% {
+          margin-top: -180px;
+          }
+      38% {
+          margin-top: -90px;
+          }
+      66% {
+          margin-top: -90px;
+          }
+      71% {
+          margin-top: 0px;
+          }
+      99.99% {
+          margin-top: 0px;
+          }
+      100% {
+          margin-top: -270px;
+          }
+  }
