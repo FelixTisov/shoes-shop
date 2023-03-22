@@ -23,17 +23,17 @@ function Footer() {
         </div>
       </div>
 
-      <div class="contacts">
-        <div class="icon-cont">
-          <div class="icon" id="icon1">
+      <div className="contacts">
+        <div className="icon-cont">
+          <div className="icon" id="icon1">
             <a href="https://www.instagram.com/nike/"></a>
           </div>
         </div>
-        <div class="icon-cont">
-          <div class="icon" id="icon2"></div>
+        <div className="icon-cont">
+          <div className="icon" id="icon2"></div>
         </div>
-        <div class="icon-cont">
-          <div class="icon" id="icon3"></div>
+        <div className="icon-cont">
+          <div className="icon" id="icon3"></div>
         </div>
       </div>
 

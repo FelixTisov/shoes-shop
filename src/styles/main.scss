@@ -45,40 +45,40 @@
   }
 }
 
-/* Картинки товаров в слайдере */ 
-#box1{
+/* Картинки товаров в слайдере */
+#box1 {
   background-image: url('../images/slider/nike1.png');
 }
 
-#box2{
+#box2 {
   background-image: url('../images/slider/nike2.png');
 }
 
-#box3{
+#box3 {
   background-image: url('../images/slider/nike3.png');
 }
 
-#box4{
+#box4 {
   background-image: url('../images/slider/nike4.png');
 }
 
-#box5{
+#box5 {
   background-image: url('../images/slider/nike5.png');
 }
 
-#box6{
+#box6 {
   background-image: url('../images/slider/nike6.png');
 }
 
-#box7{
+#box7 {
   background-image: url('../images/slider/nike7.png');
 }
 
-#box8{
+#box8 {
   background-image: url('../images/slider/nike8.png');
 }
 
-#box9{
+#box9 {
   background-image: url('../images/slider/nike9.png');
 }
 
@@ -93,13 +93,12 @@
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  background: 
-  linear-gradient(90deg,#FFC165 75%,#FFF 0) 
-  var(--_p,100%)/200% no-repeat;
-  transition: .8s;
+  background: linear-gradient(90deg, #ffc165 75%, #fff 0) var(--_p, 100%) / 200%
+    no-repeat;
+  transition: 0.8s;
 }
 
-.promo-cont-active{
+.promo-cont-active {
   --_p: 78%;
 }
 
@@ -128,7 +127,7 @@
   margin-bottom: -5%;
 }
 
-.shadow-text{
+.shadow-text {
   font-size: 120px;
   letter-spacing: 0.28em;
   margin-left: 20px;
@@ -136,19 +135,14 @@
   color: #fcedd8;
   font-family: 'Nerko One';
   font-weight: 700;
-  text-shadow: 
-    5px 5px 0px #eb452b, 
-    10px 10px 0px #efa032, 
-    15px 15px 0px #46b59b, 
-    20px 20px 0px #017e7f, 
-    25px 25px 0px #052939, 
-    30px 30px 0px #c11a2b;
+  text-shadow: 5px 5px 0px #eb452b, 10px 10px 0px #efa032, 15px 15px 0px #46b59b,
+    20px 20px 0px #017e7f, 25px 25px 0px #052939, 30px 30px 0px #c11a2b;
 }
 
 .brand-title-cont p {
   font-family: 'Anton';
   font-size: 70px;
-  color: #FFF;
+  color: #fff;
 }
 
 /* Кнопка details */
@@ -175,14 +169,14 @@
     user-select: none;
     box-shadow: inset 0 0 0 0 #000;
     border-radius: 5px;
-    margin: 0 -.25rem;
-    padding: 0 .25rem;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    margin: 0 -0.25rem;
+    padding: 0 0.25rem;
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
     &:hover {
       box-shadow: inset 0 100px 0 0 #000;
       border-radius: 5px;
-      color: #FFF;
+      color: #fff;
     }
   }
 }
@@ -200,7 +194,7 @@
   transform: rotate(-30deg);
 }
 
-.third-box-cont{
+.third-box-cont {
   @extend %cont-shared;
   width: 100%;
   height: 50%;
@@ -223,7 +217,7 @@
 }
 
 /* Промо товары */
-.rounded-cont{
+.rounded-cont {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,7 +227,7 @@
   margin-right: 2%;
 }
 
-.rounded-item{
+.rounded-item {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -243,24 +237,24 @@
   margin-right: 5%;
   background-color: transparent;
   border-radius: 31px;
-  box-shadow: 9px 9px 24px 1px rgba(0, 0, 0, .25  );
+  box-shadow: 9px 9px 24px 1px rgba(0, 0, 0, 0.25);
   font-size: 18px;
   cursor: pointer;
 }
 
-.rounded-item-active{
+.rounded-item-active {
   width: 265px;
   height: 95.4px;
 }
 
-.photo-cont{
+.photo-cont {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 60%;
 }
 
-.photo{
+.photo {
   position: absolute;
   margin-left: 6%;
   width: 124px;
@@ -269,7 +263,7 @@
   background-repeat: no-repeat;
 }
 
-/* Картинки товаров в промо разделе */ 
+/* Картинки товаров в промо разделе */
 #ph1 {
   background-image: url('../images/shoes/nike11.png');
 }
@@ -286,7 +280,7 @@
   background-image: url('../images/shoes/nike14.png');
 }
 
-.price{
+.price {
   margin-left: 30%;
   width: 40%;
 
@@ -303,13 +297,12 @@
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  background: 
-  linear-gradient(90deg,#FFF 65%,#65A8A8 0%) 
-  var(--_p,100%)/200% no-repeat;
-  transition: .8s;
+  background: linear-gradient(90deg, #fff 65%, #65a8a8 0%) var(--_p, 100%) /
+    200% no-repeat;
+  transition: 0.8s;
 }
 
-.object-cont-active{
+.object-cont-active {
   --_p: 80%;
 }
 
@@ -339,7 +332,7 @@
 .button-circle {
   @extend %cont-shared;
   margin-left: 0;
-  width: 32px;  
+  width: 32px;
   height: 32px;
   border: 1px solid #000;
   border-radius: 100% 100% 100% 100%;
@@ -350,7 +343,7 @@
   }
 
   &:hover #circledButton {
-    color: #FFF;
+    color: #fff;
   }
 }
 
@@ -384,19 +377,19 @@
 
 #blue-string {
   margin-bottom: -50px;
-  background: #79F2FA;
+  background: #79f2fa;
   transform: rotate(-0.78deg);
 }
 
 #corral-string {
   margin-bottom: 50px;
-  background: #FFA588;
+  background: #ffa588;
   transform: rotate(2.23deg);
 }
 
 #green-string {
   margin-bottom: 50px;
-  background: #C5F38B;
+  background: #c5f38b;
   transform: rotate(-1.77deg);
 }
 
@@ -458,7 +451,7 @@
   flex-direction: column;
   width: 59.9%;
   height: 100%;
-  background-color: #EAC794;
+  background-color: #eac794;
 }
 
 .form-title-cont {
@@ -467,7 +460,7 @@
   align-items: left;
   justify-content: center;
   flex-direction: column;
-  margin-top: 0;  
+  margin-top: 0;
   width: 75%;
   height: 60%;
 
@@ -478,7 +471,7 @@
     font-size: 36px;
     line-height: 54px;
     letter-spacing: 0.105em;
-    color: #FFF;
+    color: #fff;
   }
 }
 
@@ -486,7 +479,7 @@
   @extend %cont-shared;
   width: 75%;
   height: 18%;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .input-cont {
@@ -530,12 +523,11 @@
   width: 30%;
   height: 100%;
   cursor: pointer;
-  background: 
-    linear-gradient(90deg,#3D9282 50%,#92703D 0) 
-    var(--_p,100%)/200% no-repeat;
-  transition: .4s;
+  background: linear-gradient(90deg, #3d9282 50%, #92703d 0) var(--_p, 100%) /
+    200% no-repeat;
+  transition: 0.4s;
 
-  &:hover{
+  &:hover {
     --_p: 0%;
   }
 
@@ -560,115 +552,4 @@
   height: 100%;
   width: 45%;
   background-image: url('../images/shoes/run.jpeg');
-}
-
-.cookies-warning {
-  position: fixed;
-  bottom: 5px;
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 45%;
-  height: 180px;
-  border-radius: 15px;
-  background-color: #fff;
-  padding-left: 30px;
-  padding-right: 30px;
-  box-shadow: 6px -4px 6px rgba(0, 0, 0, 0.15);
-}
-
-.cookies-header {
-  display: flex;
-  width: 100%;
-  height: 20%;
-  // background-color: yellow;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 10px;
-}
-
-.cookies-image {
-  width: 40px;
-  height: 40px;
-  background-image: url('../assets/cookie.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.cookies-title {
-  display: flex;
-  width: 70%;
-  height: 100%;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 20px;
-
-  p {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    text-align: center;
-    color: #000;
-    user-select: none;
-  }
-}
-
-.cookies-body {
-  display: flex;
-  width: 100%;
-  height: 50%;
-  // background-color: blue;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.cookies-actions {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  width: 100%;
-  height: 30%;
-  // background-color: green;
-}
-
-.cookie-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 35px;
-  background-color: #5476cd;
-  border-radius: 15px;
-  margin-left: 20px;
-  cursor: pointer;
-
-  p {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    color: #fff;
-    user-select: none;
-  }
-}
-
-.manage {
-  margin-left: 0;
-  background-color: #cfd9f2;
-
-  p {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    color: rgb(75, 75, 75);
-    user-select: none;
-  }
 }

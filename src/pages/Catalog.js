@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { FaChevronDown } from 'react-icons/fa'
+import CookiesAlert from '../components/cookies_alert/cookies'
 import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
 import CatalogItem from '../components/catalog_item/catalogItem'
@@ -13,6 +14,8 @@ function Catalog() {
 
   return (
     <div className="wrapper">
+      <CookiesAlert />
+
       <Header />
 
       <div className="fast-filter">

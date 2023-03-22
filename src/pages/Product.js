@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { FaStar, FaChevronDown } from 'react-icons/fa'
+import CookiesAlert from '../components/cookies_alert/cookies'
 import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
 import '../styles/common.scss'
@@ -15,6 +16,8 @@ function Product() {
 
   return (
     <div className="wrapper">
+      <CookiesAlert />
+
       <Header />
 
       <div className="stikers-cont">

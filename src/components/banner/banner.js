@@ -3,20 +3,20 @@ import './banner_mobile.scss'
 
 function Banner() {
   return (
-    <div class="video-cont">
-      <div class="wordCarousel">
-        <div class="left">
+    <div className="video-cont">
+      <div className="wordCarousel">
+        <div className="left">
           <p>BEST</p>
         </div>
-        <div class="right">
-          <ul class="flip">
-            <div class="swipe-item" id="you-swipe-item">
+        <div className="right">
+          <ul className="flip">
+            <div className="swipe-item" id="you-swipe-item">
               <p>YOU</p>
             </div>
-            <div class="swipe-item" id="prices-swipe-item">
+            <div className="swipe-item" id="prices-swipe-item">
               <p>PRICES</p>
             </div>
-            <div class="swipe-item" id="brands-swipe-item">
+            <div className="swipe-item" id="brands-swipe-item">
               <p>BRANDS</p>
             </div>
           </ul>

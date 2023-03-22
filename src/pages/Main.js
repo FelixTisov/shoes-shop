@@ -1,6 +1,7 @@
-import { Suspense, useRef, useState } from 'react'
+import { Suspense, useState } from 'react'
 import { FaChevronRight } from 'react-icons/fa'
 import { promoObjects } from '../components/promo_objects'
+import CookiesAlert from '../components/cookies_alert/cookies'
 import React from 'react'
 import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
@@ -38,7 +39,6 @@ window.onscroll = function () {
 
 function Main() {
   const [promoItem, setPromoItem] = useState(promoObjects[0]) // Текущий объект в промо-товарах
-  const cookiesContainer = useRef()
 
   // Анимация кнопки Order Now
   const arrowOffset = () => {
@@ -68,49 +68,9 @@ function Main() {
     setPromoItem(promoObjects[number])
   }
 
-  // Закрыть оповещение о cookies
-  const hideCookies = (value) => {
-    cookiesContainer.current.style.display = 'none'
-    localStorage.setItem('cookies', value)
-  }
-
   return (
     <div className="wrapper">
-      {!['accepted', 'rejected'].includes(localStorage.getItem('cookies')) ? (
-        <div className="cookies-warning" ref={cookiesContainer}>
-          <div className="cookies-header">
-            <div className="cookies-image" />
-            <div className="cookies-title">
-              <p>We use cookies</p>
-            </div>
-          </div>
-          <div className="cookies-body">
-            <p>
-              We use cookies to help the website function and improve your user
-              experience. You may unable/disable cookies via 'Manage cookies'
-            </p>
-          </div>
-          <div className="cookies-actions">
-            <div className="cookie-button manage">
-              <p>Manage cookies</p>
-            </div>
-            <div
-              className="cookie-button accept"
-              onClick={() => hideCookies('accepted')}
-            >
-              <p>Accept all</p>
-            </div>
-            <div
-              className="cookie-button reject"
-              onClick={() => hideCookies('rejected')}
-            >
-              <p>Reject all</p>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div></div>
-      )}
+      <CookiesAlert />
 
       <Header />
 
@@ -235,58 +195,58 @@ function Main() {
 
         {/* Промо товары */}
         <div className="bottom-cont">
-          <div class="rounded-cont">
+          <div className="rounded-cont">
             <div
-              class="rounded-item rounded-item-active"
+              className="rounded-item rounded-item-active"
               id="item0"
               onClick={() => chooseItem('item0')}
             >
-              <div class="photo-cont">
-                <div class="photo" id="ph1"></div>
+              <div className="photo-cont">
+                <div className="photo" id="ph1"></div>
               </div>
-              <div class="price">
+              <div className="price">
                 <p>800$</p>
               </div>
             </div>
           </div>
-          <div class="rounded-cont">
+          <div className="rounded-cont">
             <div
-              class="rounded-item"
+              className="rounded-item"
               id="item1"
               onClick={() => chooseItem('item1')}
             >
-              <div class="photo-cont">
-                <div class="photo" id="ph2"></div>
+              <div className="photo-cont">
+                <div className="photo" id="ph2"></div>
               </div>
-              <div class="price">
+              <div className="price">
                 <p>750$</p>
               </div>
             </div>
           </div>
-          <div class="rounded-cont">
+          <div className="rounded-cont">
             <div
-              class="rounded-item"
+              className="rounded-item"
               id="item2"
               onClick={() => chooseItem('item2')}
             >
-              <div class="photo-cont">
-                <div class="photo" id="ph3"></div>
+              <div className="photo-cont">
+                <div className="photo" id="ph3"></div>
               </div>
-              <div class="price">
+              <div className="price">
                 <p>820$</p>
               </div>
             </div>
           </div>
-          <div class="rounded-cont">
+          <div className="rounded-cont">
             <div
-              class="rounded-item"
+              className="rounded-item"
               id="item3"
               onClick={() => chooseItem('item3')}
             >
-              <div class="photo-cont">
-                <div class="photo" id="ph4"></div>
+              <div className="photo-cont">
+                <div className="photo" id="ph4"></div>
               </div>
-              <div class="price">
+              <div className="price">
                 <p>500$</p>
               </div>
             </div>
@@ -339,7 +299,7 @@ function Main() {
 
       {/* Форма обратной связи */}
       <div className="form-container">
-        <form className="form">
+        <div className="form">
           <div className="form-title-cont">
             <span>Subscribe to our</span>
             <span>news and sales</span>
@@ -352,7 +312,7 @@ function Main() {
               <span>Subscribe!</span>
             </button>
           </form>
-        </form>
+        </div>
         <div className="form-image-cont" />
       </div>
 

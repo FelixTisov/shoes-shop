@@ -1,0 +1,110 @@
+.cookies-warning {
+  position: fixed;
+  bottom: 5px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  height: 180px;
+  border-radius: 15px;
+  background-color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 6px -4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cookies-header {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  // background-color: yellow;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.cookies-image {
+  width: 40px;
+  height: 40px;
+  background-image: url('../../assets/cookie.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cookies-title {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+
+  p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    color: #000;
+    user-select: none;
+  }
+}
+
+.cookies-body {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  // background-color: blue;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cookies-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  height: 30%;
+  // background-color: green;
+}
+
+.cookie-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 35px;
+  background-color: #5476cd;
+  border-radius: 15px;
+  margin-left: 20px;
+  cursor: pointer;
+
+  p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    user-select: none;
+  }
+}
+
+.manage {
+  margin-left: 0;
+  background-color: #cfd9f2;
+
+  p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(75, 75, 75);
+    user-select: none;
+  }
+}

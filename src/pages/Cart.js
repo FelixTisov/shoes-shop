@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux'
+import CookiesAlert from '../components/cookies_alert/cookies'
 import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
 import CartItem from '../components/cart_item/CartItem'
@@ -18,6 +19,8 @@ function Cart() {
 
   return (
     <div className="wrapper">
+      <CookiesAlert />
+
       <Header />
 
       <div className="mid-column">
