@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route} from 'react-router-dom'  
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { configureStore } from '@reduxjs/toolkit'
-import { Provider } from 'react-redux';
+import { Provider } from 'react-redux'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Main from './pages/Main'
@@ -13,32 +13,28 @@ import './index.css'
 // Дефолтные состояния хранилища
 const defaultState = {
   selectedGood: {},
-  itemsInCart: []
+  itemsInCart: [],
 }
 
 // Редюсер выпадающего списка
 const selectReducer = (state = defaultState, action) => {
-  console.log('Action:')
-  console.log(action.payload)
   switch (action.type) {
-    
     case 'SELECT_GOOD':
-      return {...state, selectedGood: action.payload}
+      return { ...state, selectedGood: action.payload }
     case 'ADD_GOOD':
-      return {...state, itemsInCart: [...state.itemsInCart, action.payload]}
+      return { ...state, itemsInCart: [...state.itemsInCart, action.payload] }
 
     default:
       return state
-
   }
 }
 
 // Хранилище состояний
 const store = configureStore({
   reducer: {
-    selection: selectReducer
+    selection: selectReducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware()
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 })
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -47,15 +43,14 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route exact path='/' element={<Main/>}/>
-          <Route exact path='/catalog' element={<Catalog/>}/>
-          <Route path='/catalog/product/:id' element={<Product/>}/>
-          <Route exact path='/cart' element={<Cart/>}/>
+          <Route exact path="/" element={<Main />} />
+          <Route exact path="/catalog" element={<Catalog />} />
+          <Route path="/catalog/product/:id" element={<Product />} />
+          <Route exact path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
-  
 )
 
 reportWebVitals()
